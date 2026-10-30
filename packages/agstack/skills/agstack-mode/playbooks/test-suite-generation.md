@@ -19,7 +19,7 @@ Before anything else — before exploring, before the first Edit/Write or state-
   - Test boundary values, empty cases, and error mappings.
   - Mock only at genuine system boundaries (external HTTP services, clocks). Never mock the internal logic under test.
 
-### Step 3: Author Declarative Functional Hurl Scenarios
+### Step 3: Author Functional Suites
 - For HTTP/API surfaces, create or update `.verify/functional/<feature>.hurl`.
 - Structure scenarios to validate end-to-end user journeys:
   - Assert HTTP status codes.

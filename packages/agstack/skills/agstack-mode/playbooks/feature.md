@@ -21,7 +21,7 @@ Before anything else — before exploring, before the first Edit/Write or state-
 - [ ] Step 2: Model core types, domain entities, and boundary schemas (immutable, Zod/serde)
 - [ ] Step 3: Author 4-H2 feature contract (`.verify/features/<feature>.md`) with 4-part steps
 - [ ] Step 4: Implement behavior via TDD (write unit tests first, minimal implementation)
-- [ ] Step 5: Pair with functional verification suites (Hurl / API contracts)
+- [ ] Step 5: Pair with functional verification suites (for each surface the repository exposes)
 - [ ] Step 6: Execute default post-dev verification via `agstack` `verification` skill (`.verify/run.sh`)
 - [ ] Step 7: Execute the handoff — read `playbooks/test-suite-generation.md` when coverage gaps remain, then `playbooks/code-review.md` for the adversarial pass. If either is out of scope this session, say so and name the artifact left for it.
 
@@ -67,7 +67,7 @@ Before anything else — before exploring, before the first Edit/Write or state-
 - Adhere to `principle-immutability-first` and KISS/DRY.
 
 ### Step 5: Pair with Functional API Tests
-- Create or update `.verify/functional/<feature>.hurl` or functional test suite.
+- Create or update the functional suite under `.verify/functional/` for the feature surface.
 - Pair every request entry with exactly one step in the feature contract (`(entries …)`).
 - Ensure payloads exist under `.verify/functional/payloads/`.
 
