@@ -19,7 +19,7 @@ A UI change is proven by four layers. Each layer is a command in `.verify/verify
 1. **Find the commands.** Read the repository's existing test setup first. Use its runner for the functional layer. Do not add a second test framework.
 2. **Write the flow test before the fix.** A bug fix in the UI starts with a flow test that fails on the bug. That test is the regression test.
 3. **Register each layer in the allowlist.** Add the command to `.verify/verify.toml`. Keep the command a plain string with no dynamic command names, since the preflight rejects them.
-4. **Run through the gate.** `agent-brain verify -- <command>` for each layer. Keep the output under `.verify/artifacts/ui/`.
+4. **Run through the gate.** `sh .verify/run.sh` for each layer, with the layer's command in the allowlist. Keep the output under `.verify/artifacts/ui/`.
 5. **Report per layer.** State the pass or fail count for each layer, the artifact paths, and the threshold used for visual comparisons.
 
 ## Rules

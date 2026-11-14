@@ -49,5 +49,5 @@ Before suspending work, emit the Session Anchor and copy these 5 steps verbatim 
 - Git State: [Committed WIP on branch `feat/background-workers` (commit: e4f5a6b)]
 - Verification Status at Pause: [3/4 suites passing, unit tests green, functional tests pending DB migration]
 - Background Daemons: [All test processes stopped cleanly]
-- Resumption Command: `agent-brain route_task "resume feat/background-workers"`
+- Resumption: open the handoff note and continue from its next step
 ```

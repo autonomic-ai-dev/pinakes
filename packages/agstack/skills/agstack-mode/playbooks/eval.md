@@ -45,7 +45,7 @@ Before modifying skills or prompts, emit the Session Anchor and copy these 5 ste
 
 ```markdown
 ### Evaluation Scorecard
-- Eval Suite: [e.g. route_task classification benchmark]
+- Eval Suite: [e.g. the pilot task set in packages/agstack/eval]
 - Baseline Pass Rate: [42/45 (93.3%)] (.verify/artifacts/eval-baseline.json)
 - Candidate Pass Rate: [45/45 (100.0%)] (.verify/artifacts/eval-candidate.json)
 - Regressions Detected: 0

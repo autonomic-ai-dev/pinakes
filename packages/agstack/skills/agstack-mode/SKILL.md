@@ -106,7 +106,6 @@ Load the skill when its trigger applies. A playbook names the skills it uses; th
 | The same attempt has failed twice | `skills/loop-breaker` |
 | A claim about code, tests, or behaviour is about to be stated | `skills/claim-evidence` |
 | The task is growing beyond the request | `skills/scope-guard` |
-| A tool call is failing, or a native tool is about to replace a routed one | `skills/tool-selection` |
 | The request is ambiguous, or a question is needed | `skills/intent-clarification` |
 | A multi-step task is reporting status | `skills/progress-report` |
 | Someone needs an explanation of code, a change, or a decision | `skills/explain` |

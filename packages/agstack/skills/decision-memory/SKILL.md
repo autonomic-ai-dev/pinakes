@@ -22,7 +22,7 @@ Keep one file per repository at `.verify/decisions.md`. Each entry is one decisi
 
 ## Steps
 
-1. **Before deciding,** search the log for the topic (`grep_search` on the title keywords). If an active entry covers it, follow the entry. Do not re-decide.
+1. **Before deciding,** search the log for the topic (grep or ripgrep on the title keywords). If an active entry covers it, follow the entry. Do not re-decide.
 2. **To change a decision,** add a new entry that supersedes the old one, and set the old entry's status. Never delete an entry.
 3. **After deciding** a choice that will matter later (a library, a data shape, an interface, a naming scheme, a rollout order), add an entry before the next step.
 4. **Record only decisions that recur or constrain.** Do not log every edit.

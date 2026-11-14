@@ -35,7 +35,7 @@ Before inspecting or editing, emit the Session Anchor and copy these 5 steps ver
 
 1. **Profile Parsing:** Ingest the trace using native toolchain utilities (`go tool pprof`, `perf report`, `flamegraph.pl`, or `speedscope`).
 2. **Top Frame Extraction:** Identify the top 5 functions by self/flat time and cumulative time.
-3. **Source Mapping:** Link frame symbols to repository file lines using `grep_search` and `file_summary`.
+3. **Source Mapping:** Link frame symbols to repository file lines using grep or ripgrep.
 4. **Sanity Check:** Verify whether the hotspot is genuine CPU work or blocked I/O misattributed as CPU time.
 5. **Formulate Diagnosis:** Deliver concise diagnosis explaining what the program spent time doing.
 

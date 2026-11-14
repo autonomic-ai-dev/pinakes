@@ -1,13 +1,13 @@
 ---
 name: workflow-engine
-description: "Autonomous workflow runner for executing DAG and state-machine workflows (workflows/*.yaml) directly without requiring agent-spine. Drives agent nodes, executes verify/checkpoint gates, handles human approval gates, and maintains execution state."
+description: "Autonomous workflow runner for executing DAG and state-machine workflows (workflows/*.yaml) directly, with no external orchestrator. Drives agent nodes, executes verify/checkpoint gates, handles human approval gates, and maintains execution state."
 ---
 
 # Autonomous Workflow Engine: Zero-Dependency DAG Execution
 
 `agstack` workflows (`workflows/*.yaml`) define declarative State Machine and Directed Acyclic Graph (DAG) processes for bug reproduction, feature delivery, stacked PRs, release notes, and system audits.
 
-When `agent-spine` is installed and operational, workflows can be orchestrated via `agent-spine run` or the `spine_submit_workflow` MCP tool. **When `agent-spine` is not present, any coding agent (Antigravity CLI, Cursor, Claude Code, OpenCode, Codex, Copilot) can self-orchestrate and execute these workflows natively.**
+Run a workflow with `sh scripts/run-workflow.sh run workflows/<name>.yaml`, or let the coding agent self-orchestrate it. **Any coding agent (Antigravity CLI, Cursor, Claude Code, OpenCode, Codex, Copilot) can self-orchestrate and execute these workflows natively.**
 
 ---
 
@@ -15,9 +15,7 @@ When `agent-spine` is installed and operational, workflows can be orchestrated v
 
 ```mermaid
 flowchart TD
-    Trigger["Task / Workflow Request (@bugfix, @feature, etc.)"] --> Check{"Is agent-spine present?"}
-    Check -- Yes --> SpineRunner["agent-spine CLI / spine_submit_workflow MCP"]
-    Check -- No --> AgentEngine["Autonomous Agent Self-Orchestration (workflow-engine)"]
+    Trigger["Task / Workflow Request (@bugfix, @feature, etc.)"] --> AgentEngine["Autonomous Agent Self-Orchestration (workflow-engine)"]
     AgentEngine --> ParseDAG["1. Parse workflows/*.yaml (nodes, edges, start_node)"]
     ParseDAG --> StepLoop["2. Traverse DAG along directed edges"]
     StepLoop --> NodeKind{"Evaluate node.kind"}
@@ -35,7 +33,7 @@ flowchart TD
 
 ## 2. Agent Self-Orchestration Protocol
 
-When executing a workflow without `agent-spine`, the agent acts as the workflow engine:
+The agent acts as the workflow engine:
 
 ### Step 1: Load and Validate Workflow Specification
 1. Read the target workflow YAML file from `workflows/<name>.yaml` (e.g. `workflows/bugfix.yaml` or `workflows/feature.yaml`).

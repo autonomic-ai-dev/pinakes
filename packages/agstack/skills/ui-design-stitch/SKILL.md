@@ -9,7 +9,7 @@ Stitch produces the design. The repository implements it. The design is the sour
 
 ## Stitch tools
 
-All reached through `route_to_mcp` with server `stitch`:
+All reached through the Stitch MCP server:
 
 | Tool | Use |
 |---|---|

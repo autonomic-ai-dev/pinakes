@@ -87,16 +87,17 @@ agstack/
 
 ## 3. Installation & Usage
 
-### Via Agent-Brain (Recommended)
+### Via the Claude Code marketplace
 ```bash
-agent-brain package add @agstack
+claude plugin marketplace add autonomic-ai-dev/pinakes
+claude plugin install agstack@pinakes
 ```
 
 ### In Cursor
 Pick `agstack-mode`, or activate `platforms/cursor/rules/agstack.mdc` as the Cursor rule. Skills are read from `skills/`, with no separate Cursor copy.
 
 ### In Claude Code
-`platforms/claude/CLAUDE.md` is automatically installed by `agent-brain install --host claude` or by copying to `CLAUDE.md`.
+`platforms/claude/CLAUDE.md` is the Claude Code copy of `AGENTS.md`. Copy it to `CLAUDE.md` in the project root. Regenerate all host copies from `AGENTS.md` with `sh scripts/sync-host-policy.sh`.
 
 ### In Antigravity CLI / OpenCode / Codex
 `AGENTS.md` and `skills/` conform to the native Agent Skills specification and are discovered automatically.

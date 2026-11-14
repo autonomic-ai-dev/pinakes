@@ -51,7 +51,7 @@ Use `skills/requirements-spec` for the acceptance criteria, and `skills/intent-c
 ## Phase 3: Set up the verification
 
 1. Write each check as a literal command. A check that depends on a judgement is not a check: turn the judgement into a measured threshold, and record the threshold before the first run.
-2. Add the commands to `.verify/verify.toml`, and check that each one runs through `agent-brain verify -- <cmd>`.
+2. Add the commands to `.verify/verify.toml`, and check that each one runs through `sh .verify/run.sh`.
 3. Run each check once against the current state. A check that passes before any work is either not measuring the goal or the goal is already met. Find out which before continuing.
 4. Use `skills/feature-map` when the repository keeps one: link each check to the behaviour it proves.
 

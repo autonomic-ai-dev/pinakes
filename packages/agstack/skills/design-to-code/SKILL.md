@@ -13,7 +13,7 @@ Companion skills: `ui-design-stitch` creates the design, `pixel-perfect-ui` hold
 
 Take one of these, and state which one you used in the evidence:
 
-- **Stitch:** a screen name `projects/{project}/screens/{screen}`, read through `route_to_mcp` with server `stitch`.
+- **Stitch:** a screen name `projects/{project}/screens/{screen}`, read through the Stitch MCP server.
 - **HTML:** an HTML file the user supplied, or one exported under `.verify/artifacts/design/<screen>/`.
 
 Load `references/input-sources.md` to turn the input into one HTML file and one viewport per screen.
@@ -32,7 +32,7 @@ Load `references/input-sources.md` to turn the input into one HTML file and one 
 10. **Fix the cause, then go to step 8.** One change set per iteration. Fix the cause the diff shows, not the screenshot.
 11. **Stop.** The loop ends when every screen meets the threshold, when it reaches 8 iterations, or when two iterations in a row gain less than 0.5 points on the lowest screen. A stop at 8 or at a stall is a blocker. Report it with the diff images.
 12. **Record the evidence.** Keep the manifest, each iteration's JSON and diff images, and the final captures under `.verify/artifacts/design-loop/`. Record the screen ids, the threshold, the final match per screen, and the iteration count in the screen's feature map entry.
-13. **Verify.** Run `verification`. A design match is evidence only when it is recorded through `agent-brain verify`, so allowlist the score command.
+13. **Verify.** Run `verification`. A design match is evidence only when the score command runs through `sh .verify/run.sh`, so allowlist it.
 
 ## Rules
 

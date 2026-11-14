@@ -15,7 +15,7 @@ Before writing a single line of implementation, pause and evaluate this hierarch
    - Skip speculative features, options, and flexibility nobody asked for (YAGNI).
    - If a simpler design eliminates the need for new logic entirely, choose the simpler design.
 2. **Already in this codebase?**
-   - Search the repo (`grep_search`, symbol lookup). If an existing helper, component, utility, or service already does this, reuse it the way surrounding code does.
+   - Search the repo (grep or ripgrep, symbol lookup). If an existing helper, component, utility, or service already does this, reuse it the way surrounding code does.
 3. **Standard library or platform feature?**
    - Use built-in language or runtime capabilities (e.g., native browser date picker, standard library string/date helpers, native collection methods).
 4. **Already an installed dependency?**
@@ -33,23 +33,16 @@ Before writing a single line of implementation, pause and evaluate this hierarch
 ## 3. Token-Efficient Context Management & Supervisor Discipline
 
 The game is to reduce token usage across the entire SDLC:
-- **Obey `route_task` and `must_apply`:**
-  - `agent-brain` acts as the execution supervisor. Always read and strictly obey `must_apply` constraints returned by `route_task`.
-  - Load only the recommended skill paths returned; do not grep or load the entire skill library into context.
+- **Keep the constraints in view:**
+  - Re-read the AGENTS.md invariants and the chosen playbook's checklist before each edit.
+  - Load only the skills the playbook names; do not load the entire skill library into context.
 - **Bounded Inspection Over Full Dumps:**
   - Never dump a 1,000-line file into context just to find a 5-line function.
-  - Search symbols first with `grep_search`, then read bounded chunks using line ranges, `read_file_head`, or `read_file_tail`.
+  - Search symbols first with grep or ripgrep, then read bounded chunks using line ranges.
   - Never read build output (`dist/`, `target/`, `node_modules/`, `.git/`) or dump raw minified bundles.
 - **Persist Anti-Patterns to Prevent Rabbit Holes:**
-  - When an agent burns tokens on a false path, identify the trap immediately:
-    ```text
-    store_memory(
-      topic: "token-trap-<name>",
-      fact: "Do not read X; use Y on src/ instead.",
-      polarity: "negative"
-    )
-    ```
-  - `agent-brain` records this anti-pattern and surfaces it as a `must_apply` hard constraint on future turns.
+  - When an agent burns tokens on a false path, name the trap in the task report and state the rule that prevents it, for example: "Do not read X; use Y on src/ instead."
+  - Turn a repeated trap into a check (a lint rule or a gate) when one can catch it.
 - **Zero Conversational Fluff:**
   - Speak engineer-to-engineer. Avoid polite filler ("Certainly!", "I'd be happy to help!").
   - Lead directly with answers, code diffs, and evidence records.
