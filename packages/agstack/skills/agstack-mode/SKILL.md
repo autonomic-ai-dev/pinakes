@@ -11,11 +11,11 @@ agstack is a fixed path, not a menu. Every invocation runs the **Core path** in 
 
 Do these steps in order. Do not skip one because the task looks small.
 
-1. **Route.** Call `route_task` with `user_message`, `current_working_directory`, and `open_files`. Obey its `must_apply`. Route again only when the directory changes, the route is over four hours old, a gate denies a tool, or the task phase changes.
+1. **Select.** Match the task's intent to a row of the Routing table below. Read the chosen playbook in full. The non-negotiables in `AGENTS.md` apply to every task.
 2. **Load the core references.** Read these two files in full. They are the default for every invocation:
    - `../token-efficiency/SKILL.md`: rethink whether code is needed, reuse existing code, minimise blast radius, and keep context reads bounded.
    - `../no-comments/SKILL.md`: add no comments unless the user asks.
-3. **Search before reading.** Use `grep_search`, `file_summary`, `read_file_head`, and `read_file_tail` (agent-brain) instead of full-file reads. Read only the bounded range you need.
+3. **Search before reading.** Use grep or ripgrep to find the relevant lines, then read only that bounded range. Do not read whole large files.
 4. **Pick the playbook.** Match the intent in the Routing table below, then read that playbook in full and copy its numbered steps into your plan. No match: use `investigation`, and say why.
 5. **Load the principles the task triggers.** Each principle's `SKILL.md` lists when it applies. Read only those you need. Cite only principles you read this session.
 6. **Execute the playbook.** For any code edit, the smallest complete change comes first. Before writing new code, check in this order: does it need to exist, does the repo already have it, does the standard library or an installed dependency cover it, and is a one-line answer enough.
