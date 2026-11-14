@@ -1,13 +1,13 @@
 # curated-registry
 
-Summary: agent-registry is the central index of curated skill packages, DAG workflows, and developer utilities for the Autonomic stack. agent-brain syncs it to a local cache and installs packages from it.
+Summary: agent-registry is the central index of curated skill packages, DAG workflows, and developer utilities for the Autonomic stack.
 
 ## Sub-features
 
 - `registry-index`: Lists every package and its source in one file.
-  - Intent: Give agent-brain one canonical place to find a package.
+  - Intent: Give every client one canonical place to find a package.
   - Behaviour: `registry.json` maps each alias (for example `agstack`) to a local `path` or a `git_url` and `git_ref`. Packages marked `default` bootstrap a fresh install.
-  - Outcome: `agent-brain package add @agstack` resolves the alias through this index. Not verified in this pass.
+  - Outcome: Resolving the `agstack` alias through this index returns its source. Not verified in this pass.
 - `agstack-package`: Ships the agstack engineering process as an installable package.
   - Intent: Give every agent the same verification and process standards.
   - Behaviour: `packages/agstack/` holds the playbooks, the verification skill, and the strict-verification layout.
@@ -30,8 +30,7 @@ Summary: agent-registry is the central index of curated skill packages, DAG work
 
 ## How to get to it (user POV)
 
-- Run `agent-brain registry sync` to refresh the local cache at `~/.autonomic/memory/registry-cache/repo/`.
-- Run `agent-brain package add @agstack` to install a package.
+- Read `registry.json` to find a package's source.
 
 ## Verification Suites (Targeted Test Commands)
 
@@ -39,6 +38,6 @@ Summary: agent-registry is the central index of curated skill packages, DAG work
 
 ## Gotchas
 
-- `agent-brain` reads a cached copy of this repository. A change here takes effect for agents only after they sync.
+- A client that caches this repository sees a change only after it re-reads the cache.
 - A package entry needs either `path` or `git_url`. An entry with neither has no source to install.
 - The workflows need agent-spine to run as a DAG. Without it, an agent runs the steps itself or uses `scripts/run-workflow.sh`.

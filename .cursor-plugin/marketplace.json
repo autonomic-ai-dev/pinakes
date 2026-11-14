@@ -1,0 +1,14 @@
+{
+  "name": "pinakes",
+  "owner": {
+    "name": "Abhiuday Gupta"
+  },
+  "description": "Pinakes: curated skill packages, workflows, and developer utilities for the Autonomic AI agent stack.",
+  "plugins": [
+    {
+      "name": "agstack",
+      "source": "./packages/agstack",
+      "description": "Engineering playbooks, principles, and a strict .verify/ verification harness for coding agents."
+    }
+  ]
+}

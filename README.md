@@ -1,6 +1,6 @@
-# Central Autonomic Registry (`agent-registry`)
+# Pinakes
 
-The central registry repository for the Autonomic AI agent stack — distributing curated skill packages, workflows, and developer utilities.
+Pinakes is the registry of curated skill packages, workflows, and developer utilities for the Autonomic AI agent stack.
 
 ## Standardized Layout
 
@@ -20,20 +20,6 @@ agent-registry/
 │   └── run-workflow.sh              # Standalone DAG workflow engine (zero-Spine execution)
 └── utilities/                       # CLI utility catalog
     └── utilities.json
-```
-
-## Client Synchronization (`agent-brain`)
-
-`agent-brain` clones and pulls this repository dynamically into `~/.autonomic/memory/registry-cache/repo/`:
-
-```bash
-agent-brain registry sync
-```
-
-Install packages directly from the synced registry:
-
-```bash
-agent-brain package add @agstack
 ```
 
 ## Workflow Execution (Dual Mode)
