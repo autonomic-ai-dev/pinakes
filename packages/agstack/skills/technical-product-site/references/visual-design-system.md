@@ -20,8 +20,15 @@ High-conviction developer sites (Caveman.so, Orca.dev, Memorable.sh) share a tac
   --color-border-hover: rgba(255, 255, 255, 0.18);
   --color-border-strong: rgba(255, 255, 255, 0.28);
 
+  /* Roma Continuous Thread & Motion Tokens */
+  --color-roma-core: #ff7a4a;        /* Vibrant core laser thread */
+  --color-roma-red: #ff531a;         /* High-energy halo & glow */
+  --color-roma-highlight: #ffd9c7;   /* Razor highlight accent */
+  --color-roma-cold: #7a3826;        /* Subdued background guide rail */
+  --color-roma-glow: rgba(255, 83, 26, 0.45);
+
   /* Telemetry Accents */
-  --color-telemetry-emerald: #5fd39a;
+  --color-telemetry-emerald: #5fd39a; /* #22c55e */
   --color-telemetry-cyan: #00f2fe;
   --color-telemetry-amber: #f59e0b;
   --color-telemetry-red: #ef4444;

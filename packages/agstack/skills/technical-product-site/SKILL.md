@@ -1,13 +1,13 @@
 ---
 name: technical-product-site
-description: "Design and build high-conviction, developer-targeted product websites and technical documentation (inspired by Caveman.so, Orca.dev, Memorable.sh, Autonomic AI). Covers evidence-grounded copy (zero unverified claims), obsidian tactile bento grids, interactive proof inspectors, caveman-style docs, animated scroll-tracking changelogs, and rock-solid responsive navigation."
+description: "Design and build high-conviction, developer-targeted product websites and technical documentation (inspired by Caveman.so, Roma.app, Orca.dev, Memorable.sh, Autonomic AI). Covers evidence-grounded copy (zero unverified claims), obsidian tactile bento grids, Roma.app continuous orange arrow & glowing thread architecture, bidirectional scroll reactivity, SSR-first rolling animated numbers, sliding spring pill tabs, single-rail changelogs, caveman-style docs, and rock-solid responsive navigation."
 ---
 
 # Technical Product Site: High-Conviction Developer Web Design
 
-Engineers do not buy from marketing copy; they buy from evidence, ergonomics, and verifiable claims. A technical product website succeeds when every assertion is backed by the codebase, every code snippet works on copy-paste, and the interface exhibits the precise craft of the tools it sells.
+Engineers do not buy from marketing copy; they buy from evidence, ergonomics, verifiable claims, and flawless visual performance. A technical product website succeeds when every assertion is backed by the codebase, every code snippet works on copy-paste, and the interface exhibits the precise craft of the tools it sells.
 
-This skill is the blueprint for creating developer-focused product websites and documentation in the style of **Caveman.so**, **Orca.dev**, **Memorable.sh**, **Tesser.sh**, and **Autonomic AI**.
+This skill is the master blueprint for creating developer-focused product websites and documentation, synthesizing design and motion benchmarks from **Caveman.so**, **Roma.app**, **Orca.dev**, **Memorable.sh**, and **Autonomic AI**.
 
 ---
 
@@ -15,65 +15,109 @@ This skill is the blueprint for creating developer-focused product websites and 
 
 Every claim on a developer landing page must be grounded in verified repository facts:
 
-1. **Verify Before Writing:** Inspect the product repository (`git`, Cargo/package manifests, CLI source) before authoring copy.
-2. **Exact Technical Terminology:** Reference exact file paths (`.verify/verify.toml`, `.verify/receipt.json`), CLI commands (`tekmor verify -- <cmd>`), exit codes (`0`, `1`), and hash formats (git tree SHA).
-3. **No Phantom Capabilities:** Features in development belong under an explicit **"Honest Boundaries"** section (`references/trust-and-evidence.md`). Never present roadmap ideas as current features.
-4. **Quantifiable Invariants:** Highlight numbers developers can check: execution duration (`0.38s`), model token cost (`0 model tokens`), and runtime dependencies (`0 external dependencies`).
+1. **Verify Before Writing:** Inspect the product repository (`git`, Cargo/Go/package manifests, CLI source) before authoring copy.
+2. **Exact Technical Terminology:** Reference exact file paths (`.verify/receipt.json`, `anode.lock.json`), CLI commands (`anode inspect`, `anode dev`), exit codes (`0`, `1`), and hash formats (SHA256, git tree SHA).
+3. **No Phantom Capabilities:** Features in development belong under an explicit **"Honest Boundaries"** section ([trust-and-evidence.md](./references/trust-and-evidence.md)). Never present roadmap ideas as current features.
+4. **Quantifiable Invariants:** Highlight numbers developers can check: execution duration (`12 ms`), memory usage (`14 MB`), and model token cost (`0 model tokens`).
 
 ---
 
-## 2. Visual System: The Obsidian Aesthetic
+## 2. Visual System: Obsidian & Roma Palette
 
-High-conviction developer sites share a cohesive dark architectural palette:
+High-conviction developer sites share a cohesive dark architectural palette with purposeful semantic accents:
 
-- **Background Canvas:** `#070709` (Deep Obsidian); Elevated Surfaces: `#090a0d` (Bento Cards), `#0c0d10` (Code & Terminals).
-- **Hairline Borders:** `rgba(255, 255, 255, 0.08)` to `rgba(255, 255, 255, 0.12)`.
-- **Telemetry Accents:** Emerald (`#5fd39a`), Cyan (`#00f2fe`), Amber (`#f59e0b`), Crimson (`#ef4444`).
+- **Background Canvas:** `#000000` to `#070709` (Deep Obsidian); Elevated Surfaces: `#090a0d` (Bento Cards), `#0c0d10` (Code & Terminals).
+- **Hairline Borders:** `rgba(255, 255, 255, 0.08)` to `rgba(255, 255, 255, 0.14)`.
+- **Roma Continuous Thread Tokens:**
+  - Core Laser Thread: `#ff7a4a` / `#ff6a3a`
+  - High-Energy Glow Halo: `#ff531a` (`rgba(255, 83, 26, 0.85)`)
+  - Razor Highlight Accent: `#ffd9c7`
+- **Semantic Accents Only:**
+  - Emerald (`#22c55e` / `#5fd39a`): Determinism proofs, active states, verification passes.
+  - Amber / Yellow (`#f59e0b` / `#eab308`): Diagnostic warnings, fallback notices.
+  - Crimson / Red (`#ef4444`): Failure traps, Docker port collisions, schema drift.
 - **Typography:** Geometric sans-serif (*Geist Sans*) with tight negative letter tracking (`tracking-[-0.035em]`); monospace (*Geist Mono*) for commands, hashes, and schemas.
-- **Tactile Bento Cards:** `18px` radius, subtle top-edge directional glow (`yc-card-glow`), and hairline dividers (`gap-[1px] bg-white/[0.08]`).
-- **Ambient Lighting:** Top radial glow (`ellipse at center rgba(95,211,154,0.12) blur-3xl`) and pulsing green live beacons.
+- **Tactile Bento Cards:** `18px` radius, subtle top-edge directional glow (`yc-card-glow`), and cursor-following spotlights.
 
 Details: [`references/visual-design-system.md`](./references/visual-design-system.md).
 
 ---
 
-## 3. Key Interactive Components
+## 3. Roma.app Motion & Continuous Thread Architecture
 
-### A. Interactive Hero Evidence Inspector
-Replace static screenshots with an interactive state simulator:
-- **State Selectors:** 2–3 realistic states (`Valid Receipt`, `Stale Pass`, `Command Refused`).
-- **Hook Verdict Badge:** Live interception feedback (`PERMITTED`, `BLOCKED`, `REFUSED`).
-- **Raw Evidence Viewer:** Live JSON receipt or terminal execution stream.
-- **Architectural Rationale:** Concise explanation of the process guarantee.
+Replace artificial segmented section dividers with **an uninterrupted, glowing physical conduit** that guides the engineer down the page.
 
-### B. Unified Code Snippets (The "Four Steps" Style)
-- Full-width dark surface (`#050608`) with 1px hairline border.
-- Leading green monospace prompt (`$`).
-- Click-to-copy across the entire container with inline `"Copied"` badge feedback.
+### A. The 3-Layer Optical Glow
+1. **Wide Ambient Halo:** `16px` width, `blur-[8px]`, opacity `0.20`, `#ff531a`.
+2. **Focused Mid Halo:** `6px` width, `blur-[3px]`, opacity `0.60`, `#ff531a`.
+3. **Razor Laser Core:** `2.5px` width, gradient `from-[#ffd9c7] via-[#ff7a4a] to-[#ff531a]`, shadow `0 0 10px #ff531a`.
+
+### B. The Main Orange Arrow Runner
+- **Prominent Arrow Head:** Downward-pointing chevron badge (`↓`) riding the leading tip of the line.
+- **240px Ambient Radial Glow Aura:** `radial-gradient(circle, rgba(255, 83, 26, 0.42) 0%, transparent 70%)`.
+- **Neon Bloom Box Shadow:** `box-shadow: 0 0 16px 5px rgba(255, 83, 26, 0.85), 0 0 32px 10px rgba(255, 83, 26, 0.4)`.
+
+### C. Layout Margin Framing (Zero Character Clipping)
+- Position the thread in the container's margin zone (`left-1.5 sm:left-2.5 lg:left-3 xl:-left-6 2xl:-left-10`).
+- Ensure all text headings and bento cards retain ample left clearance so the line never cuts across copy.
+
+Details: [`references/roma-motion-architecture.md`](./references/roma-motion-architecture.md).
+
+---
+
+## 4. Bidirectional Scroll Reactivity & Section Transitions
+
+Developer audiences demand responsive, physical motion that behaves consistently in both directions:
+
+- **Bidirectional Viewport Triggers:** Configure `viewport: { once: false, amount: 0.15 }`.
+- **Scrolling Down:** Elements slide and fade into view (`y: 24 → 0`, custom cubic-bezier `[0.16, 1, 0.3, 1]`).
+- **Scrolling Up:** Elements gracefully reverse back to initial state as they leave the viewport.
+- **Re-entering:** Sections and empirical counters freshly re-animate on every subsequent pass.
+
+---
+
+## 5. SSR-First Animated Numbers & Empirical Counters
+
+Never use static numbers for empirical claims, and never trigger full React component re-renders during number counting.
+
+- **SSR & SEO First:** Pre-render the final formatted value (`98%`, `350x`, `850 MB`, `14 MB`, `4,200 ms`, `12 ms`) directly in the static server HTML for instant search engine indexing and zero Cumulative Layout Shift (CLS).
+- **Direct DOM Updates (60/120 FPS):** Mutate `ref.current.textContent` during animation frames using `motion/react` `animate()`.
+- **Bidirectional Reset:** Count up smoothly on scroll down into view; reset to 0 when scrolled away; re-animate on return.
+- **Synchronized Bar Expansion:** Pair the count-up counter with an expanding Framer Motion progress bar (`width: 0% → 100%`).
+
+Details: [`references/animated-numbers.md`](./references/animated-numbers.md).
+
+---
+
+## 6. Key Interactive Components
+
+### A. Sliding Spring Pill Tabs (`layoutId`)
+- Use Framer Motion's shared `layoutId` pill for install switchers (`brew tap` / `curl` / `source`) and interactive terminal modes (`01 inspect` / `02 dev` / `03 lockfile` / `04 deploy`).
+- Spring physics: `stiffness: 450, damping: 32` for zero-latency, tactile gliding.
+
+### B. Interactive Terminal & Vector Conduits
+- Simulate real CLI execution passes with blinking prompts, syntax coloring, and copy buttons.
+- Connect sequential execution stages using animated SVG vector conduits with traveling light beacons.
 
 Details: [`references/interactive-widgets.md`](./references/interactive-widgets.md).
 
 ---
 
-## 4. Documentation & Animated Changelog
+## 7. Documentation, FAQ Exclusivity & Single-Rail Changelog
 
-### A. Caveman-Style Documentation (`docs.caveman.so`)
-- **Host Compatibility Matrix:** Tabulated host environments, active gate support, and implementation notes.
-- **Command Reference:** Structured table of CLI flags, types, defaults, and usage recipes.
-- **Architecture Diagrams:** Dark-themed Mermaid flowcharts showing execution cycles.
+### A. FAQ Section Placement (Homepage Exclusivity)
+- Render `<FAQSection />` **strictly on the primary homepage** before the footer.
+- Purge redundant FAQ sections from comparison subpages (`/vs/*`), deploy guides (`/deploy/*`), and framework guides (`/guides/*`).
 
-### B. Animated Scroll-Tracking Changelog
-- **Vertical Timeline Rail:** 2px subtle rail with dynamic active progress beam (`from-[#5fd39a] to-emerald-400`).
-- **Traveling Glowing Dot:** Scroll-following indicator dot tracking viewport progress.
-- **Active Node Highlight:** Anchor rings illuminate as entries enter the viewport focus zone.
-- **Categorized Change Tags:** `Added`, `Changed`, `Fixed`, `Security`, `Migration`.
-- **Infinite Scroll:** `IntersectionObserver` sentinel loading historical releases seamlessly.
+### B. Single-Rail Changelog Timeline
+- Center the vertical timeline rail (`left-[15px]`) and the active traveling progress dot on the exact same axis.
+- Purge disconnected anchor rings styled with negative offsets (`-left-[27px]`) to eliminate floating dots.
 
 Details: [`references/caveman-docs-changelog.md`](./references/caveman-docs-changelog.md).
 
 ---
 
-## 5. Responsive Architecture Standards
+## 8. Responsive Architecture Standards
 
 A developer site must hold across desktop, tablet, and mobile without squishing or broken overflowing elements:
 
@@ -86,11 +130,23 @@ Details: [`references/responsive-navigation.md`](./references/responsive-navigat
 
 ---
 
-## 6. Implementation Checklist
+## 9. Static SSR, Metadata & SEO First Standards
 
-1. **Extract Truth:** Interrogate product CLI flags, manifests, and test suites for real invariants.
-2. **Scaffold Theme:** Configure Obsidian palette tokens, Geist typography, and hairline bento cards.
-3. **Build Hero & Inspector:** Implement headline tracking, live copy bar, and state-switching Proof Inspector.
-4. **Author Caveman Docs & Changelog:** Create host matrix tables, Mermaid DAGs, and the animated timeline rail.
-5. **Audit Responsiveness:** Verify 375px (mobile), 834px (tablet), and 1440px (desktop). Ensure mobile drawer toggles cleanly.
-6. **Verify:** Run type checks (`bun run check`) and production build with zero warnings.
+- **Static Pre-rendering:** Generate all routes statically via Next.js SSG / Partial Prerendering with zero hydration mismatches.
+- **Rich Structured Data:** Inject valid JSON-LD schemas for `Organization`, `SoftwareApplication`, and `FAQPage`.
+- **Machine Readability:** Expose `/llms.txt` and `/llms-full.txt` alongside standard `/robots.txt` and `/sitemap.xml`.
+
+---
+
+## 10. Complete Implementation & Audit Checklist
+
+1. **Extract Repository Truth:** Interrogate product CLI flags, manifests, and test suites for real invariants.
+2. **Scaffold Obsidian Theme:** Configure canvas tokens, Geist typography, and hairline bento cards.
+3. **Deploy Roma Continuous Thread:** Mount `<MainOrangeArrow />` with multi-tier glow strokes, 240px halo runner, and outer margin framing.
+4. **Integrate Bidirectional Animations:** Apply `viewport: { once: false, amount: 0.15 }` and cubic bezier `[0.16, 1, 0.3, 1]` across sections.
+5. **Implement Animated Numbers:** Wrap all empirical benchmarks in `<AnimatedNumber />` for bidirectional count-up and zero CLS.
+6. **Integrate Spring Pill Tabs:** Use `layoutId` on installation selectors and terminal mode switchers.
+7. **Audit FAQ Placement:** Ensure FAQ is rendered solely on homepage.
+8. **Verify Single-Rail Changelog:** Confirm only one indicator dot travels the timeline rail.
+9. **Responsive Audit:** Test 375px (mobile), 834px (tablet), and 1440px (desktop).
+10. **Verify Production Build:** Run `bun run build` ensuring all static routes pass with zero errors.

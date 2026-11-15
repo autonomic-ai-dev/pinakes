@@ -117,3 +117,36 @@ A signature feature of high-craft developer sites: a vertical timeline rail with
 - `Fixed` (`bg-amber-500/10 text-amber-300 border-amber-500/30`)
 - `Security` (`bg-purple-500/10 text-purple-300 border-purple-500/30`)
 - `Migration` (`bg-rose-500/10 text-rose-300 border-rose-500/30`)
+
+
+---
+
+## 3. Single-Rail Changelog Indicator Architecture
+
+A common visual bug in release timelines is having duplicate or floating indicator dots (e.g., an absolute anchor ring colliding with an animated scroll tracker).
+
+### The Stabilized Single-Rail Pattern
+1. Place a single vertical rail at `left-[15px]` (or `left-[23px]`).
+2. Center all status nodes and the active scroll progress dot on the EXACT same axis:
+   ```tsx
+   {/* Vertical Rail */}
+   <div className="absolute left-[15px] top-4 bottom-4 w-[1px] bg-white/[0.08]" />
+
+   {/* Active Animated Progress Dot */}
+   <motion.div
+     style={{ top: indicatorTop }}
+     className="absolute left-[15px] -translate-x-1/2 w-3 h-3 rounded-full bg-emerald-400 shadow-[0_0_12px_rgba(34,197,94,1)]"
+   />
+   ```
+3. Purge legacy disconnected anchor rings styled with arbitrary negative offsets (e.g. `-left-[27px]`). Only one single dot should ever sit on the rail.
+
+---
+
+## 4. FAQ Section Placement Doctrine (Homepage Exclusivity)
+
+Frequently Asked Questions (FAQ) sections are designed to overcome initial landing page objections and anchor high-level developer architectural questions.
+
+### Rules of Placement
+1. **Homepage Exclusivity:** Render `<FAQSection />` **only** on the primary homepage (`src/app/page.tsx`) immediately preceding the pre-footer call to action.
+2. **Subpage Purge:** Never duplicate global landing page FAQs onto targeted subpages (e.g., `/vs/docker-compose`, `/guides/*`, `/tools/*`, `/docs`). Subpages must remain strictly focused on their specific documentation or conversion task.
+3. **Structured Data:** Back the homepage FAQ with valid `schema.org/FAQPage` JSON-LD for rich Google search snippets.

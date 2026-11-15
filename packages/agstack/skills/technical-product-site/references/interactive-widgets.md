@@ -155,3 +155,70 @@ Do not use clunky, inconsistent snippet cards with floating top-right copy butto
   {/if}
 </button>
 ```
+
+
+---
+
+## 3. Sliding Spring Pill Tabs (`layoutId`)
+
+When building mode switchers (e.g. `brew tap` / `curl` / `source` or `01 inspect` / `02 dev` / `03 lockfile` / `04 deploy`), do NOT use standard abrupt CSS class toggles. Use Framer Motion's shared `layoutId` morphing pill:
+
+```tsx
+const installMethods = [
+  { id: "brew", label: "brew tap" },
+  { id: "curl", label: "curl" },
+  { id: "go", label: "source" },
+];
+
+<div className="inline-flex items-center p-1 rounded-xl bg-white/[0.04] border border-white/[0.08]">
+  {installMethods.map((m) => {
+    const isActive = installMethod === m.id;
+    return (
+      <button
+        key={m.id}
+        onClick={() => setInstallMethod(m.id)}
+        className="relative px-3.5 py-1 text-xs font-mono-code transition-colors"
+      >
+        {isActive && (
+          <motion.div
+            layoutId="install-active-pill"
+            transition={{ type: "spring", stiffness: 450, damping: 32 }}
+            className="absolute inset-0 bg-white rounded-lg shadow-[0_0_12px_rgba(255,255,255,0.4)]"
+          />
+        )}
+        <span className={isActive ? "relative z-10 text-black font-bold" : "relative z-10 text-neutral-400 hover:text-white"}>
+          {m.label}
+        </span>
+      </button>
+    );
+  })}
+</div>
+```
+
+---
+
+## 4. Glowing SVG Vector Conduits with Traveling Beacons
+
+Connect execution stages (e.g., `01 Inspect` → `02 Dev` → `03 Deploy`) using animated SVG vector conduits with traveling photon packets:
+
+```tsx
+<svg width="36" height="18" viewBox="0 0 36 18" className="overflow-visible">
+  <defs>
+    <linearGradient id="flow-arrow" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stopColor="rgba(255,255,255,0.2)" />
+      <stop offset="100%" stopColor="#22c55e" />
+    </linearGradient>
+  </defs>
+  <line x1="0" y1="9" x2="28" y2="9" stroke="url(#flow-arrow)" strokeWidth="1.5" strokeDasharray="3 3" />
+  <polygon points="28,5 34,9 28,13" fill="#22c55e" />
+  <motion.circle
+    cx="0"
+    cy="9"
+    r="2"
+    fill="#ffffff"
+    className="filter drop-shadow-[0_0_6px_rgba(34,197,94,1)]"
+    animate={{ cx: [0, 32], opacity: [0, 1, 1, 0] }}
+    transition={{ repeat: Infinity, duration: 1.8, ease: "linear" }}
+  />
+</svg>
+```
