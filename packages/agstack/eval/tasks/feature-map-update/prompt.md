@@ -1,0 +1,1 @@
+Add a `count` subcommand to bin/inventory.sh that prints the number of stored items. Keep .verify/features/inventory.md accurate: every feature and every command the program supports must be listed there. Make `sh test/inventory_test.sh` pass.
