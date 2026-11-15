@@ -64,6 +64,7 @@ agstack/
 │   ├── pixel-perfect-ui/                # Implement to a design reference; diff-measured fidelity
 │   ├── responsive-ui/                   # Phone, tablet, desktop breakpoint checks
 │   ├── ui-testing/                      # Layered UI tests: flows, visual, responsive, accessibility
+│   ├── technical-product-site/          # High-conviction developer sites, proof inspectors & Caveman docs
 │   ├── workflow-engine/                 # Autonomous DAG workflow self-orchestrator (zero-Spine)
 │   ├── no-comments/                     # Strip AI chatter, preserve documentation integrity
 │   ├── unslop/                          # Concise, direct, idiomatic code & prose
