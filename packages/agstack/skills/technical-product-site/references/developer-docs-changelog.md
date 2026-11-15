@@ -1,12 +1,12 @@
-# Caveman Docs & Animated Changelog Specification
+# Developer Technical Docs & Animated Changelog Specification
 
 Developer tools require documentation that acts as a precision technical manual and a changelog that communicates continuous engineering velocity.
 
 ---
 
-## 1. Caveman.so Documentation Style Guide
+## 1. Minimalist High-Evidence Documentation Style Guide
 
-Follow these layout patterns derived from `docs.caveman.so`:
+Follow these layout patterns for precision technical documentation:
 
 ### A. Host Compatibility Matrix Table
 Tabulate environments clearly so engineers immediately see where gates are active:

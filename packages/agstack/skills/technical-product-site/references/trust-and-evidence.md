@@ -30,7 +30,7 @@ Engineers have high skepticism toward marketing copy. They trust software that e
 
 ## 2. The "Honest Boundaries" Section
 
-One of the strongest trust-builders on Caveman and high-conviction product sites is an explicit **"What it does not do yet"** or **"Honest Boundaries"** section:
+One of the strongest trust-builders on high-conviction developer and platform engineering product sites is an explicit **"What it does not do yet"** or **"Honest Boundaries"** section:
 
 ### Example Pattern:
 ```html

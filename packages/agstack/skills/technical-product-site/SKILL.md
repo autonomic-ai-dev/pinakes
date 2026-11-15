@@ -1,13 +1,13 @@
 ---
 name: technical-product-site
-description: "Design and build high-conviction, developer-targeted product websites and technical documentation (inspired by Caveman.so, Roma.app, Orca.dev, Memorable.sh, Autonomic AI). Covers evidence-grounded copy (zero unverified claims), obsidian tactile bento grids, Roma.app continuous orange arrow & glowing thread architecture, bidirectional scroll reactivity, SSR-first rolling animated numbers, sliding spring pill tabs, single-rail changelogs, caveman-style docs, and rock-solid responsive navigation."
+description: "Design and build high-conviction, developer-targeted product websites and technical documentation. Covers evidence-grounded copy (zero unverified claims), obsidian tactile bento grids, continuous orange conduit & runner badge motion architecture, bidirectional scroll reactivity, SSR-first rolling animated numbers, sliding spring pill tabs, single-rail changelogs, developer docs, and rock-solid responsive navigation."
 ---
 
 # Technical Product Site: High-Conviction Developer Web Design
 
 Engineers do not buy from marketing copy; they buy from evidence, ergonomics, verifiable claims, and flawless visual performance. A technical product website succeeds when every assertion is backed by the codebase, every code snippet works on copy-paste, and the interface exhibits the precise craft of the tools it sells.
 
-This skill is the master blueprint for creating developer-focused product websites and documentation, synthesizing design and motion benchmarks from **Caveman.so**, **Roma.app**, **Orca.dev**, **Memorable.sh**, and **Autonomic AI**.
+This skill is the master blueprint for creating developer-focused product websites and documentation, synthesizing architecture, motion, and interaction standards for high-conviction developer and platform engineering tools.
 
 ---
 
@@ -22,13 +22,13 @@ Every claim on a developer landing page must be grounded in verified repository 
 
 ---
 
-## 2. Visual System: Obsidian & Roma Palette
+## 2. Visual System: Obsidian & Telemetry Palette
 
 High-conviction developer sites share a cohesive dark architectural palette with purposeful semantic accents:
 
 - **Background Canvas:** `#000000` to `#070709` (Deep Obsidian); Elevated Surfaces: `#090a0d` (Bento Cards), `#0c0d10` (Code & Terminals).
 - **Hairline Borders:** `rgba(255, 255, 255, 0.08)` to `rgba(255, 255, 255, 0.14)`.
-- **Roma Continuous Thread Tokens:**
+- **Continuous Conduit Tokens:**
   - Core Laser Thread: `#ff7a4a` / `#ff6a3a`
   - High-Energy Glow Halo: `#ff531a` (`rgba(255, 83, 26, 0.85)`)
   - Razor Highlight Accent: `#ffd9c7`
@@ -43,7 +43,7 @@ Details: [`references/visual-design-system.md`](./references/visual-design-syste
 
 ---
 
-## 3. Roma.app Motion & Continuous Thread Architecture
+## 3. Continuous Conduit & Runner Arrow Architecture
 
 Replace artificial segmented section dividers with **an uninterrupted, glowing physical conduit** that guides the engineer down the page.
 
@@ -52,7 +52,7 @@ Replace artificial segmented section dividers with **an uninterrupted, glowing p
 2. **Focused Mid Halo:** `6px` width, `blur-[3px]`, opacity `0.60`, `#ff531a`.
 3. **Razor Laser Core:** `2.5px` width, gradient `from-[#ffd9c7] via-[#ff7a4a] to-[#ff531a]`, shadow `0 0 10px #ff531a`.
 
-### B. The Main Orange Arrow Runner
+### B. The Main Arrow Runner
 - **Prominent Arrow Head:** Downward-pointing chevron badge (`↓`) riding the leading tip of the line.
 - **240px Ambient Radial Glow Aura:** `radial-gradient(circle, rgba(255, 83, 26, 0.42) 0%, transparent 70%)`.
 - **Neon Bloom Box Shadow:** `box-shadow: 0 0 16px 5px rgba(255, 83, 26, 0.85), 0 0 32px 10px rgba(255, 83, 26, 0.4)`.
@@ -61,7 +61,7 @@ Replace artificial segmented section dividers with **an uninterrupted, glowing p
 - Position the thread in the container's margin zone (`left-1.5 sm:left-2.5 lg:left-3 xl:-left-6 2xl:-left-10`).
 - Ensure all text headings and bento cards retain ample left clearance so the line never cuts across copy.
 
-Details: [`references/roma-motion-architecture.md`](./references/roma-motion-architecture.md).
+Details: [`references/continuous-conduit-motion.md`](./references/continuous-conduit-motion.md).
 
 ---
 
@@ -113,7 +113,7 @@ Details: [`references/interactive-widgets.md`](./references/interactive-widgets.
 - Center the vertical timeline rail (`left-[15px]`) and the active traveling progress dot on the exact same axis.
 - Purge disconnected anchor rings styled with negative offsets (`-left-[27px]`) to eliminate floating dots.
 
-Details: [`references/caveman-docs-changelog.md`](./references/caveman-docs-changelog.md).
+Details: [`references/developer-docs-changelog.md`](./references/developer-docs-changelog.md).
 
 ---
 
@@ -142,7 +142,7 @@ Details: [`references/responsive-navigation.md`](./references/responsive-navigat
 
 1. **Extract Repository Truth:** Interrogate product CLI flags, manifests, and test suites for real invariants.
 2. **Scaffold Obsidian Theme:** Configure canvas tokens, Geist typography, and hairline bento cards.
-3. **Deploy Roma Continuous Thread:** Mount `<MainOrangeArrow />` with multi-tier glow strokes, 240px halo runner, and outer margin framing.
+3. **Deploy Continuous Conduit:** Mount `<MainOrangeArrow />` with multi-tier glow strokes, 240px halo runner, and outer margin framing.
 4. **Integrate Bidirectional Animations:** Apply `viewport: { once: false, amount: 0.15 }` and cubic bezier `[0.16, 1, 0.3, 1]` across sections.
 5. **Implement Animated Numbers:** Wrap all empirical benchmarks in `<AnimatedNumber />` for bidirectional count-up and zero CLS.
 6. **Integrate Spring Pill Tabs:** Use `layoutId` on installation selectors and terminal mode switchers.

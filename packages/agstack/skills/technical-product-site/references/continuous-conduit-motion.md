@@ -1,26 +1,26 @@
-# Roma.app Motion & Continuous Thread Architecture
+# Continuous Conduit Motion & Glowing Thread Architecture
 
 High-conviction developer and platform websites achieve storytelling continuity not through jarring modal popups or disjointed section dividers, but through **an unbroken, glowing physical conduit** that guides the engineer from the hero hook down to the final call to action.
 
-Drawing from the award-winning motion architecture of **Roma.app**, this guide details the exact mathematics, CSS tokens, and component architecture for the **Main Orange Arrow & Continuous Glowing Thread**.
+This guide details the exact mathematics, CSS tokens, and component architecture for the **Main Orange Arrow & Continuous Glowing Conduit**.
 
 ---
 
 ## 1. Core Visual Tokens & Color Hierarchy
 
-The Roma thread relies on high-energy, warm volcanic neon strokes layered over an obsidian black canvas (`#000000`).
+The continuous conduit relies on high-energy, warm volcanic neon strokes layered over an obsidian black canvas (`#000000`).
 
 ```css
 :root {
-  /* Roma Thread Palette */
-  --rt-core: #ff7a4a;        /* Vibrant core laser thread (sharp line) */
-  --rt-red: #ff531a;         /* High-energy halo & ambient bloom */
-  --rt-cold: #7a3826;        /* Subdued background guide rail */
-  --rt-light: #ffd9c7;       /* Razor highlight & arrowhead accent */
-  --rt-glow: rgba(255, 83, 26, 0.45);
+  /* Continuous Conduit Palette */
+  --cc-core: #ff7a4a;        /* Vibrant core laser thread (sharp line) */
+  --cc-glow: #ff531a;        /* High-energy halo & ambient bloom */
+  --cc-track: #7a3826;       /* Subdued background guide rail */
+  --cc-light: #ffd9c7;       /* Razor highlight & arrowhead accent */
+  --cc-aura: rgba(255, 83, 26, 0.45);
 
   /* Physics Spring Defaults */
-  --rt-ease: cubic-bezier(0.16, 1, 0.3, 1);
+  --cc-ease: cubic-bezier(0.16, 1, 0.3, 1);
 }
 ```
 
@@ -30,17 +30,17 @@ The Roma thread relies on high-energy, warm volcanic neon strokes layered over a
 
 Rendering a glowing neon thread that looks razor-sharp without looking muddy or blurry requires 3 separate layers rendered simultaneously:
 
-1. **Layer 1: Wide Ambient Halo (`lp-thread-halo--wide`)**
+1. **Layer 1: Wide Ambient Halo (`conduit-halo--wide`)**
    - Width: `12px – 16px`
    - Blur: `blur-[8px]`
    - Opacity: `0.18 – 0.22`
    - Role: Illuminates the surrounding dark canvas with a subtle, warm radiant aura.
-2. **Layer 2: Focused Mid Halo (`lp-thread-halo`)**
+2. **Layer 2: Focused Mid Halo (`conduit-halo--mid`)**
    - Width: `5px – 6px`
    - Blur: `blur-[3px]`
    - Opacity: `0.55 – 0.65`
    - Role: Provides the high-density energy field directly clinging to the wire.
-3. **Layer 3: Razor Laser Core (`lp-thread-core`)**
+3. **Layer 3: Razor Laser Core (`conduit-core`)**
    - Width: `2px – 2.5px`
    - Gradient: `from-[#ffd9c7] via-[#ff7a4a] to-[#ff531a]`
    - Box-Shadow: `0 0 10px #ff531a`
@@ -129,18 +129,18 @@ export function MainOrangeArrow() {
           {/* Background Static Guide Track */}
           <div className="absolute inset-0 w-[2px] bg-gradient-to-b from-[#ff531a]/20 via-white/[0.06] to-[#ff531a]/25 rounded-full" />
 
-          {/* Active Glowing Roma Orange Thread */}
+          {/* Active Glowing High-Energy Conduit */}
           <motion.div
             style={{ height: lineHeight }}
             className="absolute top-0 left-0 w-full overflow-visible"
           >
-            {/* Roma Tier 1: Wide Ambient Halo */}
+            {/* Multi-Tier Optical Glow 1: Wide Ambient Halo */}
             <div className="absolute top-0 -left-[7px] w-[16px] h-full bg-[#ff531a] opacity-20 blur-[8px] rounded-full" />
 
-            {/* Roma Tier 2: Mid Focused Halo */}
+            {/* Multi-Tier Optical Glow 2: Mid Focused Halo */}
             <div className="absolute top-0 -left-[2px] w-[6px] h-full bg-[#ff531a] opacity-60 blur-[3px] rounded-full" />
 
-            {/* Roma Tier 3: Sharp Laser Core */}
+            {/* Multi-Tier Optical Glow 3: Sharp Laser Core */}
             <div className="absolute top-0 left-0 w-[2px] h-full bg-gradient-to-b from-[#ffd9c7] via-[#ff7a4a] to-[#ff531a] shadow-[0_0_10px_#ff531a]" />
 
             {/* Periodic Energy Pulse Tracer */}
