@@ -1,6 +1,6 @@
 ---
 name: agstack-mode
-description: "agstack's engineering mode, applied on every invocation: token-efficient, minimal-blast-radius engineering with a fixed core path, routing to a playbook (including UI design, SDLC, gstack executive reviews, and minimalist entrepreneurship), principles, and verification evidence before completion. Use whenever the user says agstack, /agstack, or asks for any coding, design, review, debugging, UI, or documentation work."
+description: "agstack's engineering mode for any coding, design, review, debugging, UI, or documentation task: a fixed core path, one playbook chosen from the routing table, principles, and verification evidence before completion. Use when the user says agstack or asks for such work."
 ---
 
 # agstack mode
@@ -12,7 +12,7 @@ agstack is a fixed path, not a menu. Every invocation runs the **Core path** in 
 Do these steps in order. Do not skip one because the task looks small.
 
 1. **Select.** Match the task's intent to a row of the Routing table below. Read the chosen playbook in full. The non-negotiables in `AGENTS.md` apply to every task.
-2. **Load the core references.** Read these two files in full. They are the default for every invocation:
+2. **Load the core references.** For any task that edits code, read these two files in full before the first edit. Read-only answers skip them:
    - `../token-efficiency/SKILL.md`: rethink whether code is needed, reuse existing code, minimise blast radius, and keep context reads bounded.
    - `../no-comments/SKILL.md`: add no comments unless the user asks.
 3. **Search before reading.** Use grep or ripgrep to find the relevant lines, then read only that bounded range. Do not read whole large files.
@@ -29,6 +29,10 @@ Before any verification suite or test harness, output the session anchor:
 > - **Target Output Root**: `.verify/` (fixtures in `verify/` remain strictly read-only)
 > - **SDLC Orchestrator**: `agstack` (`skills/verification/SKILL.md` / `playbooks/<name>.md`)
 ```
+
+## Lite mode
+
+When the user asks for lite mode, or a task is a one-file change, run only steps 1, 3, and 6 of the core path. Load only the principles the task triggers, and enforce the comment and verification gates. Playbooks and the eval are not used in lite mode.
 
 ## Non-negotiables
 

@@ -1,0 +1,10 @@
+[commands]
+test = "sh test/run.sh"
+lint = "sh scripts/lint.sh"
+typecheck = "sh scripts/typecheck.sh"
+build = "sh scripts/build.sh"
+comments = "sh packages/agstack/scripts/check-added-comments.sh"
+skills = "sh packages/agstack/scripts/skill-lint.sh"
+
+[allow]
+shell = ["sh", "bash", "git", "ls", "cat", "grep", "find", "awk", "sed", "cd", "mkdir", "cp", "head", "tail", "wc", "sort", "diff", "test", "printf", "echo", "mktemp"]
