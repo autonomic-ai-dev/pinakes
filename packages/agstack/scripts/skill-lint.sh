@@ -7,6 +7,7 @@ WORD_BUDGET=800
 DESCRIPTION_LIMIT=400
 ERRORS=0
 WARNINGS=0
+unversioned=0
 
 fail() {
   echo "ERROR [$1]: $2" >&2
@@ -62,11 +63,33 @@ while IFS= read -r file; do
     fi
   fi
 
+  version="$(field "$file" version)"
+  status="$(field "$file" status)"
+  if [ -z "$version" ]; then
+    unversioned=$((unversioned + 1))
+  elif ! printf '%s' "$version" | grep -qE '^[0-9]+\.[0-9]+\.[0-9]+$'; then
+    fail "$rel" "version '$version' is not MAJOR.MINOR.PATCH"
+  fi
+  if [ -n "$status" ]; then
+    case "$status" in
+      active|candidate|deprecated) ;;
+      *) fail "$rel" "status '$status' must be active, candidate, or deprecated" ;;
+    esac
+  fi
+  if [ "$status" = "deprecated" ]; then
+    removal="$(field "$file" removal)"
+    printf '%s' "$removal" | grep -qE '^[0-9]{4}-[0-9]{2}-[0-9]{2}$' || fail "$rel" "deprecated skill needs removal: YYYY-MM-DD"
+  fi
+
   words="$(wc -w < "$file" | tr -d ' ')"
   if (( words > WORD_BUDGET )); then
     warn "$rel" "$words words; budget is $WORD_BUDGET"
   fi
 done < <(find "$SKILLS" -name SKILL.md | sort)
+
+if (( unversioned > 0 )); then
+  warn "skills" "$unversioned skill(s) have no version field; add version: 1.0.0 when next edited"
+fi
 
 legacy="$(grep -rlE 'agent-brain|agent-spine|agent_brain|thesmos|tekmor|route_task' "$SKILLS" 2>/dev/null | sort || true)"
 if [[ -n "$legacy" ]]; then

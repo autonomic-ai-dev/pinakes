@@ -54,11 +54,13 @@ claude -p "$PROMPT" \
   --setting-sources project \
   --permission-mode acceptEdits \
   --allowedTools "Read" "Edit" "Write" "Grep" "Glob" "Bash(sh:*)" "Bash(bash:*)" "Bash(git:*)" "Bash(ls:*)" "Bash(cat:*)" "Bash(grep:*)" "Bash(printf:*)" "Bash(echo:*)" "Bash(find:*)" "Bash(mkdir:*)" "Bash(cp:*)" "Bash(awk:*)" "Bash(sed:*)" "Bash(od:*)" "Bash(mktemp:*)" "Bash(cd:*)" "Bash(head:*)" "Bash(tail:*)" "Bash(wc:*)" "Bash(tr:*)" "Bash(sort:*)" "Bash(diff:*)" "Bash(touch:*)" "Bash(test:*)" "Bash(.:*)" \
-  --output-format json \
+  --output-format stream-json --verbose \
   --max-budget-usd 1.50 \
-  --no-session-persistence > claude.json 2> claude.err
+  --no-session-persistence > claude.jsonl 2> claude.err
 AGENT_EXIT=$?
 set -e
+jq -s 'map(select(.type == "result")) | last' claude.jsonl > claude.json
+sh "$PKG/scripts/skill-trace.sh" claude.jsonl > skills.tsv
 
 COST="$(jq -r '.total_cost_usd // 0' claude.json)"
 TURNS="$(jq -r '.num_turns // 0' claude.json)"
