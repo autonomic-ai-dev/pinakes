@@ -1,6 +1,6 @@
 ---
 name: gstack
-description: "Garry Tan gstack executive review framework. Specialist engineering and founder roles: YC Office Hours (ideation & product reframing), CEO review (10-star product vision & strategic expansion), Design review (UI polish & 0-10 rating), DevEx review (Time to Hello World & friction reduction), Engineering review (architecture, failure modes & edge cases), Autoplan pipeline (sequential executive reviews), and multi-surface QA. Automatically activates when discussing product vision, office hours, 10-star product, design critique, developer experience, or executive review without remembering slash commands."
+description: "Executive product reviews: office hours to challenge a premise, CEO review for vision, design review for UI craft, developer-experience review for friction, and engineering review for failure modes. Use when asked to review a product idea or plan, or to challenge its direction. Skip for routine implementation."
 disable-model-invocation: true
 ---
 

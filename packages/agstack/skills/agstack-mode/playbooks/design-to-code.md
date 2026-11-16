@@ -15,6 +15,6 @@ Skills used: `design-to-code`, `ui-design-stitch` (Stitch inputs), `pixel-perfec
 9. [ ] Step 9: Fix the causes in the order the feedback loop gives: size, missing or extra elements, position, typography, colour, images. Then return to step 7. One change set per iteration.
 10. [ ] Step 10: Stop when every screen meets the threshold, at 8 iterations, or after two iterations in a row that gain less than 0.5 points on the lowest screen. A cap or a stall is a blocker. Report it with the last diff images.
 11. [ ] Step 11: Check the responsive breakpoints. Repeat steps 2 and 7 at each breakpoint the design defines, and at 390×844, 834×1112, and 1440×900 when it defines none. Every breakpoint must meet the threshold.
-12. [ ] Step 12: Run the layers through the allowlist: the flow test, `ui-testing`'s accessibility check, and the score command. Each must pass through `agent-brain verify`.
+12. [ ] Step 12: Run the layers through the allowlist: the flow test, `ui-testing`'s accessibility check, and the score command. Each must pass through `sh .verify/run.sh`.
 13. [ ] Step 13: Record the evidence. Keep the manifest, each iteration's JSON and diff PNGs, and the final captures under `.verify/artifacts/design-loop/`. Record the Stitch project and screen ids, the threshold, the final match per screen, and the iteration count in the feature map.
 14. [ ] Step 14: Run `verification` and write the evidence record. Do not claim completion without the match numbers and the artifact paths.

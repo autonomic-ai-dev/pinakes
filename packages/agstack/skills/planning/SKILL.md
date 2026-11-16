@@ -26,7 +26,7 @@ Write the plan at `.verify/plans/<slug>.md`:
 
 ## Steps
 
-1. **Map the affected code** with `grep_search` and the feature map. List each module, interface, and data shape the change touches.
+1. **Map the affected code** with grep or ripgrep and the feature map. List each module, interface, and data shape the change touches.
 2. **Order by dependency.** Put the change that everything else depends on first. Put changes that can be verified in isolation before ones that need the whole system.
 3. **Make each step leave the system working.** A step that breaks the build until the next step is merged is two steps merged into one. Split it or reorder it.
 4. **Attach a check to each step.** The check must run in under a few minutes, or it is split.

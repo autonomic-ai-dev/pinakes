@@ -12,4 +12,7 @@ for file in *.json; do
   jq -e . "$file" >/dev/null
 done
 
+echo "==> Linting agstack skills"
+bash packages/agstack/scripts/skill-lint.sh
+
 echo "==> [agent-registry] Verification passed cleanly (exit 0)."

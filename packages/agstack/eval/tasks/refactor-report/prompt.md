@@ -1,0 +1,1 @@
+lib/report.sh has two formatters with duplicated logic. Consolidate them into one helper, update the callers in bin/report.sh, and keep the output of bin/report.sh byte-identical. Make `sh test/report_test.sh` pass.

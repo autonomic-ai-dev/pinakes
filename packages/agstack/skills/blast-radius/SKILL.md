@@ -10,7 +10,7 @@ A small change can trigger subtle cascading failures across callers, database qu
 ## The Blast Radius Protocol
 
 ### 1. Caller & Interface Tracing
-- Identify every direct and transitive caller of the modified function, type, or module using `find_callers`, `grep_search`, or LSP symbol references.
+- Identify every direct and transitive caller of the modified function, type, or module using grep or ripgrep, or LSP symbol references.
 - Check for dynamic invocations, reflection, serialized JSON interfaces, or message bus topics where static analyzers cannot trace callers.
 - Verify whether the change modifies parameter order, defaults, optionality, or return shapes.
 

@@ -9,7 +9,7 @@ Context is the agent's working memory, and every token of it competes with the t
 
 ## Budget rules
 
-- Read a file only in the range you need. Search for the symbol first (`grep_search`), then read the matching lines and a few lines of context.
+- Read a file only in the range you need. Search for the symbol first (grep or ripgrep), then read the matching lines and a few lines of context.
 - Never read build output, `node_modules`, `target`, `dist`, lock files, or generated files. Search them with a pattern if you must.
 - Cap a command's output. Pipe long logs through `tail` or a pattern, and keep the matching lines, not the whole log.
 - Do not repeat a read you already made in this session. Keep the fact you need in a short note instead.

@@ -1,6 +1,6 @@
 ---
 name: agstack-mode
-description: "agstack's engineering mode, applied on every invocation: token-efficient, minimal-blast-radius engineering with a fixed core path, routing to a playbook (including UI design, SDLC, gstack executive reviews, and minimalist entrepreneurship), principles, and verification evidence before completion. Use whenever the user says agstack, /agstack, or asks for any coding, design, review, debugging, UI, or documentation work."
+description: "agstack's engineering mode for any coding, design, review, debugging, UI, or documentation task: a fixed core path, one playbook chosen from the routing table, principles, and verification evidence before completion. Use when the user says agstack or asks for such work."
 ---
 
 # agstack mode
@@ -11,11 +11,11 @@ agstack is a fixed path, not a menu. Every invocation runs the **Core path** in 
 
 Do these steps in order. Do not skip one because the task looks small.
 
-1. **Route.** Call `route_task` with `user_message`, `current_working_directory`, and `open_files`. Obey its `must_apply`. Route again only when the directory changes, the route is over four hours old, a gate denies a tool, or the task phase changes.
-2. **Load the core references.** Read these two files in full. They are the default for every invocation:
+1. **Select.** Match the task's intent to a row of the Routing table below. Read the chosen playbook in full. The non-negotiables in `AGENTS.md` apply to every task.
+2. **Load the core references.** For any task that edits code, read these two files in full before the first edit. Read-only answers skip them:
    - `../token-efficiency/SKILL.md`: rethink whether code is needed, reuse existing code, minimise blast radius, and keep context reads bounded.
    - `../no-comments/SKILL.md`: add no comments unless the user asks.
-3. **Search before reading.** Use `grep_search`, `file_summary`, `read_file_head`, and `read_file_tail` (agent-brain) instead of full-file reads. Read only the bounded range you need.
+3. **Search before reading.** Use grep or ripgrep to find the relevant lines, then read only that bounded range. Do not read whole large files.
 4. **Pick the playbook.** Match the intent in the Routing table below, then read that playbook in full and copy its numbered steps into your plan. No match: use `investigation`, and say why.
 5. **Load the principles the task triggers.** Each principle's `SKILL.md` lists when it applies. Read only those you need. Cite only principles you read this session.
 6. **Execute the playbook.** For any code edit, the smallest complete change comes first. Before writing new code, check in this order: does it need to exist, does the repo already have it, does the standard library or an installed dependency cover it, and is a one-line answer enough.
@@ -29,6 +29,10 @@ Before any verification suite or test harness, output the session anchor:
 > - **Target Output Root**: `.verify/` (fixtures in `verify/` remain strictly read-only)
 > - **SDLC Orchestrator**: `agstack` (`skills/verification/SKILL.md` / `playbooks/<name>.md`)
 ```
+
+## Lite mode
+
+When the user asks for lite mode, or a task is a one-file change, run only steps 1, 3, and 6 of the core path. Load only the principles the task triggers, and enforce the comment and verification gates. Playbooks and the eval are not used in lite mode.
 
 ## Non-negotiables
 
@@ -106,7 +110,6 @@ Load the skill when its trigger applies. A playbook names the skills it uses; th
 | The same attempt has failed twice | `skills/loop-breaker` |
 | A claim about code, tests, or behaviour is about to be stated | `skills/claim-evidence` |
 | The task is growing beyond the request | `skills/scope-guard` |
-| A tool call is failing, or a native tool is about to replace a routed one | `skills/tool-selection` |
 | The request is ambiguous, or a question is needed | `skills/intent-clarification` |
 | A multi-step task is reporting status | `skills/progress-report` |
 | Someone needs an explanation of code, a change, or a decision | `skills/explain` |

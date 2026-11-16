@@ -33,7 +33,7 @@ Before modifying code, emit the Session Anchor and copy these 5 steps verbatim i
 
 ## 3. Checklist Steps
 
-1. **Context Extraction:** Review last route digest (`~/.agent_brain/logs/last-route.md` or session summary). Note the primary goal and unresolved blockers.
+1. **Context Extraction:** Review the handoff note or the last session summary. Note the primary goal and unresolved blockers.
 2. **Git State Audit:** Run `git status` and `git diff --stat`. Verify if prior changes were staged, unstaged, or committed.
 3. **Health Check:** Run `.verify/doctor.sh` and allowlisted `.verify/run.sh`. Record baseline status to `.verify/artifacts/pickup-health.log`.
 4. **Synthesize Active TodoList:** Write out the remaining steps for the active objective.

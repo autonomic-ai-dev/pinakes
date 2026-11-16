@@ -4,7 +4,7 @@ Load this file in step 1 of `design-to-code`. Its job is to produce, for each sc
 
 ## Stitch screen
 
-Stitch is reached with `route_to_mcp` and server `stitch`. Read a tool's schema with the same call and `describe_tool: true` before you call it.
+Stitch is reached through the Stitch MCP server. Read a tool's schema with the same call and `describe_tool: true` before you call it.
 
 1. **Find the screen.** `list_screens` for the project lists its screens. Pick the screen by title. Use `get_screen` if you already have the name.
 2. **Read the screen.** `get_screen` with `name` set to `projects/{project}/screens/{screen}`. It returns:

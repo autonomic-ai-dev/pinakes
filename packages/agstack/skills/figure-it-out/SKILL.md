@@ -1,6 +1,6 @@
 ---
 name: figure-it-out
-description: "Figure it out and finish the task without a stream of questions. Use when the user says figure it out, figure out how to, keep going until it is done, complete it, do not ask me, or I do not want to answer questions; when a goal is stated with no steps; or when the agent is about to ask a series of questions about how to do a task. Frames the problem, designs the workflow and playbook, sets up verification, runs and loops until the measured result is reached, and leaves an audit report for human review."
+description: "Finish a goal stated without steps, asking only what cannot be decided safely. Use when the user says figure it out, keep going until done, or do not ask me, or when a goal has no steps. Frames the problem, sets up verification, loops to a measured result, and leaves an audit report. Skip when the steps are given."
 ---
 
 # Figure it out
@@ -51,7 +51,7 @@ Use `skills/requirements-spec` for the acceptance criteria, and `skills/intent-c
 ## Phase 3: Set up the verification
 
 1. Write each check as a literal command. A check that depends on a judgement is not a check: turn the judgement into a measured threshold, and record the threshold before the first run.
-2. Add the commands to `.verify/verify.toml`, and check that each one runs through `agent-brain verify -- <cmd>`.
+2. Add the commands to `.verify/verify.toml`, and check that each one runs through `sh .verify/run.sh`.
 3. Run each check once against the current state. A check that passes before any work is either not measuring the goal or the goal is already met. Find out which before continuing.
 4. Use `skills/feature-map` when the repository keeps one: link each check to the behaviour it proves.
 
