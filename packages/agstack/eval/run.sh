@@ -21,7 +21,7 @@ cp -R "$TASKDIR/fixture/." "$OUT/"
 cd "$OUT"
 git init -q
 git add -A
-git -c user.email=eval@local -c user.name=eval commit -q -m base
+git -c user.email=eval@local -c user.name=eval -c commit.gpgsign=false commit -q -m base
 
 mkdir -p .claude
 case "$COND" in
@@ -77,6 +77,16 @@ sh .grade_hidden.sh > grade.out 2>&1
 HIDDEN_EXIT=$?
 set -e
 rm -f .grade_hidden.sh
+
+PLAYBOOK_VERDICT=PASS
+if [ -f "$TASKDIR/playbook" ] && [ "$COND" != none ] && [ "$COND" != pstack ]; then
+  PLAYBOOK_REPORT="$(sh "$PKG/scripts/playbook-check.sh" claude.jsonl "$TASKDIR/playbook")"
+  PLAYBOOK_VERDICT="$(printf '%s\n' "$PLAYBOOK_REPORT" | tail -n 1)"
+  printf 'playbook-check:\n%s\n' "$PLAYBOOK_REPORT" >> grade.out
+fi
+if [ "$PLAYBOOK_VERDICT" = FAIL ]; then
+  HIDDEN_EXIT=1
+fi
 
 mkdir -p "$(dirname "$RESULTS")"
 printf '%s\t%s\t%s\t%s\t%s\t%s\t%s\t%s\t%s\t%s\t%s\n' \
