@@ -1,6 +1,7 @@
 ---
 name: principle-attack-the-premise
 description: "Apply when two or more fixes that share one assumption have failed the same check. Write the assumption down and test it directly before writing another fix that depends on it."
+version: 0.1.0
 ---
 
 # Attack the Premise

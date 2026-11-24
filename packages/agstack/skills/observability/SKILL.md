@@ -1,6 +1,7 @@
 ---
 name: observability
 description: "Make a system's behaviour visible: structured logs, metrics for rates and latency, and traces across calls, with the rules for what to record and what never to record. Use when adding a service or endpoint, when debugging something only visible in production, or when a change needs a signal to confirm it works."
+version: 0.1.0
 ---
 
 # Observability

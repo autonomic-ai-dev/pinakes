@@ -1,6 +1,7 @@
 ---
 name: principle-fix-root-causes
 description: "Apply when a defect is reported, or when about to add a guard, retry, or null check that would hide a failure."
+version: 0.1.0
 ---
 
 # Principle: Fix Root Causes

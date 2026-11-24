@@ -1,6 +1,7 @@
 ---
 name: create-verification-skill
 description: "Create a project-specific verification playbook that drives the real app the way a user would: launch it, exercise a feature, capture evidence, and clean up. Use when a project has no scripted way to prove behavior end to end, or when only unit tests exist."
+version: 0.1.0
 ---
 
 # Create a verification skill

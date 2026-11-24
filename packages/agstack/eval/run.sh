@@ -4,7 +4,7 @@ set -eu
 HERE="$(cd "$(dirname "$0")" && pwd)"
 PKG="$(cd "$HERE/.." && pwd)"
 REG="$(cd "$PKG/../.." && pwd)"
-PSTACK="${PSTACK_DIR:-/Volumes/Seagate/developer/personal/autonomic-ai-dev/plugins/pstack}"
+PSTACK="${PSTACK_DIR:-$(cd "$REG/../plugins/pstack" 2>/dev/null && pwd || echo "$REG/../plugins/pstack")}"
 TASK="${1:?usage: run.sh <task> <condition: none|pstack|agstack-prev|agstack-now> <rep>}"
 COND="${2:?condition required}"
 REP="${3:?rep required}"

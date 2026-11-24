@@ -1,0 +1,13 @@
+# Runtime verification output (agstack .verify/ contract)
+# .verify/features/, .verify/knowledge-base/, and .verify/run.sh stay tracked.
+.verify/artifacts/
+.verify/output/
+.verify/results/
+.verify/logs/
+
+# Python
+__pycache__/
+*.pyc
+
+# macOS
+.DS_Store

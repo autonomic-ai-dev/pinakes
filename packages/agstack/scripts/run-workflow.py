@@ -77,13 +77,31 @@ def validate_workflow(data, filename="workflow"):
         errors.append(f"start_node '{start_node}' is not defined in nodes list")
 
     edges = data.get("edges", [])
+    seen_from = set()
     for idx, edge in enumerate(edges):
         src = edge.get("from")
         dst = edge.get("to")
         if not src or src not in nodes:
             errors.append(f"Edge #{idx} source '{src}' does not exist in nodes")
+        elif src in seen_from:
+            errors.append(
+                f"Edge #{idx} source '{src}' has multiple outgoing edges; "
+                "this engine executes a single linear chain"
+            )
+        seen_from.add(src)
         if not dst or dst not in nodes:
             errors.append(f"Edge #{idx} destination '{dst}' does not exist in nodes")
+
+    if not errors:
+        successors = {e.get("from"): e.get("to") for e in edges}
+        visited = set()
+        node = start_node
+        while node is not None:
+            if node in visited:
+                errors.append(f"Cycle detected in edge chain at node '{node}'")
+                break
+            visited.add(node)
+            node = successors.get(node)
 
     if errors:
         print(f"Validation FAILED for {filename}:", file=sys.stderr)

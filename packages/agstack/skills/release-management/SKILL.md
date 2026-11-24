@@ -1,6 +1,7 @@
 ---
 name: release-management
 description: "Cut a release safely: version bump, changelog, signed tag, release notes, and a rollback plan. Use when the user asks to release, tag, publish, or prepare a version, or when a release PR is about to be merged."
+version: 0.1.0
 ---
 
 # Release management

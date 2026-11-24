@@ -1,6 +1,7 @@
 ---
 name: figure-it-out
 description: "Finish a goal stated without steps, asking only what cannot be decided safely. Use when the user says figure it out, keep going until done, or do not ask me, or when a goal has no steps. Frames the problem, sets up verification, loops to a measured result, and leaves an audit report. Skip when the steps are given."
+version: 0.1.0
 ---
 
 # Figure it out

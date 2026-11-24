@@ -1,6 +1,7 @@
 ---
 name: jailbreak-defense
 description: "Hardening LLM, agentic, and autonomous applications against jailbreaking, direct and indirect prompt injection, system prompt extraction, untrusted content execution, and excessive tool agency."
+version: 0.1.0
 ---
 
 # Jailbreak & Prompt Injection Defense

@@ -1,0 +1,14 @@
+{
+  "name": "agstack-founder",
+  "version": "1.0.0",
+  "description": "agstack-founder — entrepreneurship and executive-review skills for coding agents (companion to agstack core)",
+  "kind": "bundle",
+  "entrypoints": {
+    "universal": [
+      "AGENTS.md",
+      "skills/**",
+      "playbooks/**"
+    ]
+  },
+  "default": false
+}

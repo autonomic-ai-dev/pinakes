@@ -1,6 +1,7 @@
 ---
 name: principle-never-block-on-human
 description: "Apply when about to ask the user a question that the repository, its tests, or a quick experiment could answer."
+version: 0.1.0
 ---
 
 # Principle: Never Block on the Human

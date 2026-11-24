@@ -1,6 +1,7 @@
 ---
 name: pull-request
 description: "Author rich, reviewable pull requests and push atomic chunked commits with descriptive commit messages. Structures PRs with Problem Intent, High-Level Design (HLD with Mermaid charts), Low-Level Design (LLD), Blast Radius, and Evidence Records."
+version: 0.1.0
 ---
 
 # Pull Request & Delivery Standard

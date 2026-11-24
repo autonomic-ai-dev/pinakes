@@ -1,6 +1,7 @@
 ---
 name: incident-response
 description: "Triage and resolve a production or user-facing failure: stabilise first, find the cause with evidence, fix or roll back, then write a blameless review. Use when something is broken for users or for a running system, or when an alert fires."
+version: 0.1.0
 ---
 
 # Incident response

@@ -1,6 +1,7 @@
 ---
 name: architect
 description: "Design system architecture, domain models, and interfaces before implementing code. Grounds decisions in existing repository patterns, ADRs, and caller ergonomics. Evaluates interface depth and screens for over-engineering."
+version: 0.1.0
 ---
 
 # Architect: Pre-Implementation Design & Modeling

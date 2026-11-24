@@ -1,6 +1,7 @@
 ---
 name: handoff
 description: "Write a handoff note so work can resume in a fresh session or be picked up by another person or agent. Use when a session is ending, when the context is full, when pausing a task, or when passing work to someone else."
+version: 0.1.0
 ---
 
 # Handoff

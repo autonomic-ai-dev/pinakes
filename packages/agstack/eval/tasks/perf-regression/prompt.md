@@ -1,0 +1,1 @@
+`sh test/perf_test.sh` fails the 5-second time budget — `enrich` in `lib/enrich.sh` is too slow. Make it fast enough to pass while producing identical output, without changing the test. Run `sh test/perf_test.sh` until it passes.

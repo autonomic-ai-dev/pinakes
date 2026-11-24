@@ -1,6 +1,7 @@
 ---
 name: requirements-spec
 description: "Turn a request into testable requirements with acceptance criteria, non-functional limits, and explicit exclusions before any code is written. Use at the start of a feature, a change to behaviour, or any task where the request describes a goal rather than a check."
+version: 0.1.0
 ---
 
 # Requirements spec

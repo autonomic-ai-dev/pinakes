@@ -11,7 +11,8 @@
 AI agents without a strict process produce slop: commentary that restates obvious code, fragile workarounds, unverified claims, and hallucinated fixes. 
 
 Inspired by [pstack](https://github.com/cursor/plugins/tree/main/pstack), **`agstack`** adapts rigorous software practices into an agentic framework:
-- **Full-SDLC Playbooks (`agstack-mode`):** Dedicated step-by-step procedures covering every lifecycle phase: `context-and-intent`, `design-and-architecture`, `bug-fix`, `feature`, `refactoring`, `test-suite-generation`, `security-and-jailbreak-defense`, `code-review`, `technical-writing`, `prototype`, `entrepreneur`, `gstack-review`, and `autonomous-run`.
+- **Full-SDLC Playbooks (`agstack-mode`):** One routing table maps intent to a single playbook along the spine — Request (`context-and-intent`, `investigation`, `multi-phase-plan`), Design (`design-and-architecture`, `prototype`), Build (`feature`, `bug-fix`, `refactoring`, `database-migration`, `test-suite-generation`, `technical-writing`), Verify (`code-review`, `security-and-jailbreak-defense`, `eval`), Deploy (`pull-request`, `babysit`, `shipping`, `devops-pipeline`, `infrastructure-orchestration`), Operate (`perf-issue`, `hillclimb`, `incident`, `trace-forensics`, `runtime-forensics`), Maintain (`postmortem`, `session-pickup`, `pause-safely`, `worktree-cleanup`), plus `autonomous-run`.
+- **Subagent orchestration (`orchestrate`, `swarm`):** Planner/worker/verifier trees driven by `plan.json`/`state.json`/handoffs — the engine is host subagents or thesmos. Workers get a prepared context packet (`context.featureMaps`, `context.invariants`, `context.packet` from `.verify/context/<task>.md`) so they verify against curated knowledge instead of re-deriving it.
 - **Interrogate Code, Never the User:** Agents discover entry points, ports, and schemas by navigating the codebase.
 - **Deep Architecture & Patterns:** Conforming strictly to the repository's existing architecture, ADRs, and caller ergonomics (`architect`).
 - **Forensics & Bug Repro:** Diagnosing stack traces, parsing logs, and proving bugs with failing runtime reproductions *before* writing any fix (`forensics`).
@@ -42,15 +43,17 @@ agstack/
 │       └── principles.mdc               # Principles reference
 │
 ├── skills/                              # Universal skills (Open Agent Skills Standard)
-│   ├── agstack-mode/                    # Playbook orchestrator
+│   ├── agstack-mode/                    # SDLC playbook orchestrator
+│   │   ├── SKILL.md                     #   routing table, subagents section, trust contract
+│   │   ├── worker.md                    #   worker kickoff contract (context is authoritative)
+│   │   └── playbooks/                   # feature, bug-fix, incident, postmortem, babysit, etc.
+│   ├── orchestrate/                     # Planner-tree subagent orchestration
 │   │   ├── SKILL.md
-│   │   └── playbooks/                   # bug-fix, feature, refactoring, entrepreneur, etc.
-│   ├── entrepreneur/                    # Minimalist entrepreneur journey (Sahil Lavingia)
-│   │   ├── SKILL.md
-│   │   └── references/                  # 10 stage playbooks (community, validate, mvp, pricing, etc.)
-│   ├── gstack/                          # Executive review suite (Garry Tan)
-│   │   ├── SKILL.md
-│   │   └── references/                  # office-hours, ceo-review, design, devex, eng, autoplan, qa
+│   │   ├── references/                  # planner, spawning, handoffs
+│   │   └── schemas/                     # plan.schema.json, state.schema.json
+│   ├── swarm/                           # Parallel worker fan-out drained into one report
+│   ├── watch-pr/                        # Typed GitHub PR/stack watcher (bun + gh)
+│   │   └── scripts/                     # cli.ts, github.ts, policy.ts, tests
 │   ├── feature-map/                     # Feature contract authoring & coverage
 │   │   ├── SKILL.md
 │   │   ├── references/                  # contract-format, authoring-rules, layout-and-gates
@@ -60,11 +63,7 @@ agstack/
 │   │   └── references/                  # allowlist-and-runner, hurl-standards
 │   ├── security-audit/                  # Vulnerability scanning, secrets, OWASP, AST validation
 │   ├── jailbreak-defense/               # Prompt injection defense, delimiters, tool bounds
-│   ├── ui-design-stitch/                # Stitch design: projects, design systems, screens, exports
-│   ├── pixel-perfect-ui/                # Implement to a design reference; diff-measured fidelity
-│   ├── responsive-ui/                   # Phone, tablet, desktop breakpoint checks
-│   ├── ui-testing/                      # Layered UI tests: flows, visual, responsive, accessibility
-│   ├── technical-product-site/          # High-conviction developer sites, continuous conduit & evidence docs
+│   ├── statechart/                      # TLA+ compiler + corpus rendered as Mermaid statecharts
 │   ├── workflow-engine/                 # Autonomous DAG workflow self-orchestrator (zero-Spine)
 │   ├── no-comments/                     # Strip AI chatter, preserve documentation integrity
 │   ├── unslop/                          # Concise, direct, idiomatic code & prose
@@ -77,12 +76,23 @@ agstack/
 │       ├── fix-root-causes/
 │       └── never-block-on-human/
 │
+├── agents/                              # Subagent definitions (agstack-agent, comment-sicko)
+├── eval/                                # Skill-evolution gate: fixture tasks, hidden checks, A/B runs
+├── docs/guide/                          # Onboarding guide
+├── TRUST.md                             # What the machinery proves; candidate set
+├── ENFORCEMENT.md                       # Enforcement classes
+├── EVOLUTION.md / CHANGELOG.md          # Skill promotion doctrine + history
+│
 └── scripts/
     ├── check-added-comments.sh          # Git pre-commit comment linter
     ├── install-git-hook.sh              # Hook installer
+    ├── maps_for.sh                      # Feature-map lookup for context packets
+    ├── playbook-check.sh                # Eval enforcement: required playbook was read
     ├── run-workflow.py                  # Portable DAG workflow engine
     └── run-workflow.sh                  # Shell wrapper for standalone workflow execution
 ```
+
+Companion packages (installed separately, prompted for when routed to and absent): `agstack-ui` (interface work), `agstack-founder` (entrepreneurship and executive reviews).
 
 ---
 

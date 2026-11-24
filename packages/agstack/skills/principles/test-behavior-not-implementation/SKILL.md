@@ -1,6 +1,7 @@
 ---
 name: principle-test-behavior-not-implementation
 description: "Apply when writing or reviewing tests, or when a test mocks internals or asserts on private methods."
+version: 0.1.0
 ---
 
 # Principle: Test Behavior, Not Implementation

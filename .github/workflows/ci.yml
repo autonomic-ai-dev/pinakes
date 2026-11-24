@@ -17,6 +17,12 @@ jobs:
           jq . registry.json > /dev/null
           jq . workflows.json > /dev/null
 
+      - name: Validate Workflow DAGs
+        run: |
+          for workflow in workflows/*.yaml; do
+            python3 packages/agstack/scripts/run-workflow.py validate "$workflow"
+          done
+
       - name: Check Zero Added Comments
         run: |
           bash packages/agstack/scripts/check-added-comments.sh

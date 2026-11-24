@@ -1,6 +1,7 @@
 ---
 name: principle-model-the-domain
 description: "Apply when writing stateful logic, when a new feature adds another branch to an existing chain, or when the same shape assumption repeats across files. Encode the domain in a data structure instead of scattered conditionals."
+version: 0.1.0
 ---
 
 # Model the Domain

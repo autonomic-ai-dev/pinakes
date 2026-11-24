@@ -1,6 +1,7 @@
 ---
 name: skill-feedback
 description: "Rate the agstack skills you used on a task and record concrete improvements in a shared feedback log, then produce the report on request. Use at the end of a task that relied on one or more agstack skills, when a skill was wrong, missing a step, or caused a problem, and when the user asks for the skill report."
+version: 0.1.0
 ---
 
 # Skill feedback

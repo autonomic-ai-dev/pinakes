@@ -1,0 +1,1 @@
+`sh test/race_test.sh` fails intermittently — the final count sometimes comes out below 20. Find the race in `lib/counter.sh` and fix it so the test passes on every run, without changing the test. Run it until it passes 5 consecutive times.

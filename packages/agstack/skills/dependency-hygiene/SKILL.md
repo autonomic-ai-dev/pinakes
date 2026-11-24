@@ -1,6 +1,7 @@
 ---
 name: dependency-hygiene
 description: "Keep dependencies current, audited, and pinned without churn. Use when adding a dependency, when a security advisory or a Dependabot alert appears, or when a build breaks after an update."
+version: 0.1.0
 ---
 
 # Dependency hygiene

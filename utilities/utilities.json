@@ -3,19 +3,19 @@
   "utilities": {
     "agent-brain": {
       "alias": "brain",
-      "description": "Turn routing, memory, and skills for AI coding agents",
+      "description": "tekmor — proof verification for coding agents: allowlisted checks, receipts, and turn gates",
       "invoke": [
-        "agent-brain route_task",
-        "agent-brain registry list",
-        "agent-brain add @alias",
-        "agent-brain doctor"
+        "tekmor doctor",
+        "tekmor verify -- <cmd>",
+        "tekmor verify receipt",
+        "tekmor install"
       ],
-      "mcp_tools": ["route_task", "store_memory", "skill_search", "skill_get"]
+      "hooks": ["stop-gate", "bash-gate", "commit-gate"]
     },
     "agent-spine": {
       "alias": "spine",
-      "description": "Deterministic YAML workflow DAG execution",
-      "invoke": ["agent-spine run --workflow <name>", "agent-spine init"],
+      "description": "thesmos — deterministic YAML workflow DAG execution",
+      "invoke": ["thesmos run <workflow.yaml>", "thesmos init"],
       "when": "Multi-step repeatable tasks with approval gates (release notes, stacked PRs, bugfix loops)"
     }
   }

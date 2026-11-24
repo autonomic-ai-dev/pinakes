@@ -1,0 +1,1 @@
+`sh test/report_test.sh` passes sometimes and fails sometimes. Find why `report` in `lib/report.sh` is nondeterministic and fix it so the test passes on every run, without changing the test. Run it until it passes 8 consecutive times.

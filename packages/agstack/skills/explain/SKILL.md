@@ -1,6 +1,7 @@
 ---
 name: explain
 description: "Explain code, a change, a design, a decision, or a failure to a specific reader in layers, from the summary down to the mechanism and the evidence. Use when the user asks how something works, why a choice was made, what a diff does, or to teach a concept. Also use before handing work to a reader who did not write it."
+version: 0.1.0
 ---
 
 # Explain

@@ -10,6 +10,16 @@
       "default": true,
       "recommend_boost": 0.40
     },
+    "agstack-ui": {
+      "path": "packages/agstack-ui",
+      "description": "agstack-ui — UI design, pixel-fidelity, responsive, and UI testing skills (companion to agstack core)",
+      "recommend_boost": 0.20
+    },
+    "agstack-founder": {
+      "path": "packages/agstack-founder",
+      "description": "agstack-founder — entrepreneurship and executive-review skills (companion to agstack core)",
+      "recommend_boost": 0.15
+    },
     "matt-skills": {
       "git_url": "https://github.com/mattpocock/skills.git",
       "git_ref": "main",
@@ -45,6 +55,12 @@
       "git_url": "https://github.com/jeffallan/claude-skills.git",
       "git_ref": "main",
       "description": "Jeff Allan curated Claude skills library"
+    },
+    "caveman": {
+      "git_url": "https://github.com/JuliusBrussee/caveman.git",
+      "git_ref": "main",
+      "description": "Caveman (caveman.so) — token savings for coding agents: compressed agent prose, context compression, commit/review/stats skills, and a local compression engine",
+      "recommend_boost": 0.30
     },
     "ecc": {
       "git_url": "https://github.com/affaan-m/everything-claude-code.git",

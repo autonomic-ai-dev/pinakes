@@ -1,6 +1,7 @@
 ---
 name: forensics
 description: "Diagnose stack traces, triage production logs, analyze runtime crashes, and build minimal reproductions. Settle defect causes with runtime proof before touching production code."
+version: 0.1.0
 ---
 
 # Forensics: Stack Trace Analysis & Bug Reproduction

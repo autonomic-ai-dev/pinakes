@@ -1,6 +1,7 @@
 ---
 name: tdd
 description: "Fix a bug with a regression test first, when the bug has a clear, cheap test path. Use when asked for TDD, a failing test, or a regression test, or when a focused test would catch the bug. Skip when the test would need heavy setup, mocks of internals, or production state."
+version: 0.1.0
 ---
 
 # Test-first bug fix

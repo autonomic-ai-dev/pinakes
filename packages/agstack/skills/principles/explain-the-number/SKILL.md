@@ -1,6 +1,7 @@
 ---
 name: principle-explain-the-number
 description: "Apply before reporting or acting on a measured number: a speedup, regression, latency, throughput, or eval score. Name the decision it changes, find what limits it, and rule out that it measured something other than the work."
+version: 0.1.0
 ---
 
 # Explain the Number

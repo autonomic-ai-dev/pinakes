@@ -1,6 +1,7 @@
 ---
 name: principle-foundational-thinking
 description: "Apply before writing control flow for a new feature, a state machine, or a function that branches on the same data in several places."
+version: 0.1.0
 ---
 
 # Principle: Foundational Thinking

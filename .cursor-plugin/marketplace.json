@@ -9,6 +9,16 @@
       "name": "agstack",
       "source": "./packages/agstack",
       "description": "Engineering playbooks, principles, and a strict .verify/ verification harness for coding agents."
+    },
+    {
+      "name": "agstack-ui",
+      "source": "./packages/agstack-ui",
+      "description": "UI design, pixel-fidelity, responsive, and UI testing skills (companion to agstack core)."
+    },
+    {
+      "name": "agstack-founder",
+      "source": "./packages/agstack-founder",
+      "description": "agstack-founder: entrepreneurship and executive-review skills (companion to agstack core)."
     }
   ]
 }
