@@ -72,7 +72,7 @@ DENIALS="$(jq -r '.permission_denials | length' claude.json)"
 
 git add -A
 ADDED_COMMENTS="$(git diff --cached HEAD -- lib bin | grep -c '^+[[:space:]]*#' || true)"
-TESTS_CHANGED="$(git diff --cached --name-only HEAD -- test | wc -l | tr -d ' ')"
+TESTS_CHANGED="$(git diff --cached --name-only --diff-filter=MD HEAD -- test | wc -l | tr -d ' ')"
 
 cp "$TASKDIR/hidden.sh" .grade_hidden.sh
 set +e
