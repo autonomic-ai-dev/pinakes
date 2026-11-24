@@ -1,0 +1,14 @@
+{
+  "name": "agstack-ui",
+  "version": "1.0.0",
+  "description": "agstack-ui — UI design, pixel-fidelity, responsive, and UI testing skills for coding agents (companion to agstack core)",
+  "kind": "bundle",
+  "entrypoints": {
+    "universal": [
+      "AGENTS.md",
+      "skills/**",
+      "playbooks/**"
+    ]
+  },
+  "default": false
+}

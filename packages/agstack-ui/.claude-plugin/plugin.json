@@ -1,0 +1,9 @@
+{
+  "name": "agstack-ui",
+  "version": "1.0.0",
+  "description": "agstack-ui: UI design, pixel-fidelity, responsive, and UI testing skills (companion to agstack core).",
+  "author": {
+    "name": "Abhiuday Gupta"
+  },
+  "license": "MIT"
+}

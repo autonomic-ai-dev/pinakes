@@ -1,0 +1,1 @@
+`sh bin/serve.sh` fails and `logs/app.log` shows a crash loop. Diagnose the root cause from the logs and the code path, fix it minimally, and write a short postmortem naming the root cause in `postmortem.md`. Run `sh bin/serve.sh` until it prints ready.

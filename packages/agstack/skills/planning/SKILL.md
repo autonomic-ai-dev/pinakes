@@ -1,6 +1,7 @@
 ---
 name: planning
 description: "Break a multi-step change into ordered, independently verifiable steps with risks and rollback. Use before starting any task that touches more than one module, changes an interface or data, or will take more than one session."
+version: 0.1.0
 ---
 
 # Planning

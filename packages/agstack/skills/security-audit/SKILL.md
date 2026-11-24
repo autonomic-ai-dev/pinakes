@@ -1,6 +1,7 @@
 ---
 name: security-audit
 description: "Comprehensive vulnerability auditing for source code, dependencies, credentials, secrets, memory safety, and OWASP Top 10 vulnerabilities."
+version: 0.1.0
 ---
 
 # Security Audit: Vulnerability & Hardening Standards

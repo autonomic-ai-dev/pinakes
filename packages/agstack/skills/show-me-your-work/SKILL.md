@@ -1,6 +1,7 @@
 ---
 name: show-me-your-work
 description: "Keep a reviewable decision trail for long or unattended work: one row per decision with what, why, evidence, and result. Use for autonomous or multi-phase runs, or any work a person reviews after stepping away."
+version: 0.1.0
 ---
 
 # Show me your work

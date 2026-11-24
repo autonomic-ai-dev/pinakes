@@ -1,6 +1,7 @@
 ---
 name: loop-breaker
 description: "Stop repeating a failing attempt. Use when the same test, command, or fix has failed twice, when the agent keeps editing the same lines without progress, or when a retry loop has no new information. Forces a change of hypothesis or an escalation with evidence."
+version: 0.1.0
 ---
 
 # Loop breaker

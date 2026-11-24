@@ -33,6 +33,7 @@ while IFS= read -r line; do
     continue
   fi
   [[ "$line" == '+'* && "$line" != '+++'* ]] || continue
+  case "$current_file" in */skills/*/scripts/*) continue ;; esac
   added="${line:1}"
   ext="${current_file##*.}"
   case "$ext" in

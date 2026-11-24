@@ -1,6 +1,7 @@
 ---
 name: intent-clarification
 description: "Decide when to ask the user a question and how to ask it. Use when a request is ambiguous, when two readings would lead to different work, or when a choice depends on a fact only the user has. Prefers answering from the repository, asks one question with a stated default, and never stalls on something that can be checked."
+version: 0.1.0
 ---
 
 # Intent clarification

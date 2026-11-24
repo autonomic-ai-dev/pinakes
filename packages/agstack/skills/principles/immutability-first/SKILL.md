@@ -1,6 +1,7 @@
 ---
 name: principle-immutability-first
 description: "Apply when a function receives a value and would change it, or when shared state is updated from more than one place."
+version: 0.1.0
 ---
 
 # Principle: Immutability First

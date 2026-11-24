@@ -1,6 +1,7 @@
 ---
 name: decision-memory
 description: "Record each decision once in a decision log and check the log before deciding again. Use when a choice is about to be made that may already have been made in this task, this repository, or a past session, or when the same question is being asked a second time."
+version: 0.1.0
 ---
 
 # Decision memory

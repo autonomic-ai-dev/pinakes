@@ -1,6 +1,7 @@
 ---
 name: token-efficiency
 description: "Token-efficient engineering and minimal blast radius (inspired by ponytail). Solves the complete task with the least new code and minimal token consumption across context reads and output generations. Rethinks whether new code is needed before writing it."
+version: 0.1.0
 ---
 
 # Token Efficiency & Minimal Blast Radius

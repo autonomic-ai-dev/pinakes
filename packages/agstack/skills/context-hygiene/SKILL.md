@@ -1,6 +1,7 @@
 ---
 name: context-hygiene
 description: "Keep the agent's context small and relevant. Use when a session is long, when reads are large, when tool output is noisy, when the agent starts forgetting earlier decisions, or before a task that will read many files."
+version: 0.1.0
 ---
 
 # Context hygiene

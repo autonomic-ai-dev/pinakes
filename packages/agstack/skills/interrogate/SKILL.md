@@ -1,6 +1,7 @@
 ---
 name: interrogate
 description: "Adversarial pre-completion review across failure modes, concurrency, error paths, and code quality. Actively attempts to break the diff before reporting completion."
+version: 0.1.0
 ---
 
 # Interrogate: Adversarial Review

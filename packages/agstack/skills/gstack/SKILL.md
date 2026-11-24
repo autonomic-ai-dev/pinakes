@@ -2,6 +2,7 @@
 name: gstack
 description: "Executive product reviews: office hours to challenge a premise, CEO review for vision, design review for UI craft, developer-experience review for friction, and engineering review for failure modes. Use when asked to review a product idea or plan, or to challenge its direction. Skip for routine implementation."
 disable-model-invocation: true
+version: 0.1.0
 ---
 
 # gstack: Executive Review & AI Engineering Workflow

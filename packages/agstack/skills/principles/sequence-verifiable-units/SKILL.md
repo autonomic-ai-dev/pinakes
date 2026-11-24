@@ -1,6 +1,7 @@
 ---
 name: principle-sequence-verifiable-units
 description: "Apply to multi-step work: sweeps, migrations, runs of similar edits, and how commits or PRs are ordered. Split it into units that each end in a checkable state, verify each before the next, and order delivery so a reviewer can replay it."
+version: 0.1.0
 ---
 
 # Sequence Verifiable Units

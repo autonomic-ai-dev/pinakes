@@ -1,0 +1,1 @@
+`sh migrate.sh up` applies both migrations, but `sh migrate.sh down` cannot fully undo them — migration 002 has no rollback file, so it leaves the `emails:` table line behind. Write the missing rollback following the existing naming and style conventions, and prove `sh migrate.sh up` followed by `sh migrate.sh down` restores `data/db.txt` byte-for-byte.

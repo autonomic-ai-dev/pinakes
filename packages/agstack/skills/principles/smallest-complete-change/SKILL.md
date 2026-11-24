@@ -1,6 +1,7 @@
 ---
 name: principle-smallest-complete-change
 description: "Apply before writing new code, when a change spans more than one module, or when a helper or abstraction is about to be added."
+version: 0.1.0
 ---
 
 # Principle: Smallest Complete Change

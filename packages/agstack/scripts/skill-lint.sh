@@ -2,7 +2,8 @@
 set -euo pipefail
 
 ROOT="$(cd "$(dirname "$0")/.." && pwd)"
-SKILLS="$ROOT/skills"
+SKILLS="$(cd "${1:-$ROOT/skills}" && pwd)"
+RELROOT="$(cd "$SKILLS/.." && pwd)"
 WORD_BUDGET=800
 DESCRIPTION_LIMIT=400
 ERRORS=0
@@ -32,7 +33,7 @@ field() {
 }
 
 while IFS= read -r file; do
-  rel="${file#"$ROOT"/}"
+  rel="${file#"$RELROOT"/}"
   dir="$(basename "$(dirname "$file")")"
 
   if [[ "$(head -n 1 "$file")" != "---" ]]; then

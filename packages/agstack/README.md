@@ -60,11 +60,9 @@ agstack/
 │   │   └── references/                  # allowlist-and-runner, hurl-standards
 │   ├── security-audit/                  # Vulnerability scanning, secrets, OWASP, AST validation
 │   ├── jailbreak-defense/               # Prompt injection defense, delimiters, tool bounds
-│   ├── ui-design-stitch/                # Stitch design: projects, design systems, screens, exports
-│   ├── pixel-perfect-ui/                # Implement to a design reference; diff-measured fidelity
-│   ├── responsive-ui/                   # Phone, tablet, desktop breakpoint checks
-│   ├── ui-testing/                      # Layered UI tests: flows, visual, responsive, accessibility
-│   ├── technical-product-site/          # High-conviction developer sites, continuous conduit & evidence docs
+│   ├── statechart/                      # TLA+ model checking rendered as Mermaid statecharts with bug paths
+│   ├── orchestrate/                     # Planner-tree subagent orchestration: plan.json, handoffs, verifiers
+│   ├── swarm/                           # Parallel worker fan-out drained into one report
 │   ├── workflow-engine/                 # Autonomous DAG workflow self-orchestrator (zero-Spine)
 │   ├── no-comments/                     # Strip AI chatter, preserve documentation integrity
 │   ├── unslop/                          # Concise, direct, idiomatic code & prose

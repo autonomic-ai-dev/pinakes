@@ -1,6 +1,7 @@
 ---
 name: principle-boundary-discipline
 description: "Apply when code parses external input such as requests, files, env, or subprocess output, or when internal code re-validates data that is already typed."
+version: 0.1.0
 ---
 
 # Principle: Boundary Discipline

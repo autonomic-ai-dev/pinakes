@@ -1,6 +1,7 @@
 ---
 name: claim-evidence
 description: "Make every claim about code, tests, behaviour, or the environment traceable to evidence, and mark anything unverified. Use before stating that something works, passes, exists, is fixed, or is safe, and before naming a function, file, flag, or command in a reply or a document."
+version: 0.1.0
 ---
 
 # Claim and evidence

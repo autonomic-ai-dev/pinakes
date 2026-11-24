@@ -1,0 +1,2 @@
+[commands]
+verify = "sh .verify/run.sh"

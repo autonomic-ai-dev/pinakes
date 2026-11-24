@@ -1,6 +1,7 @@
 ---
 name: scope-guard
 description: "Keep a task to what was asked. Use at the start of any task to write the scope, and whenever the work starts to touch files, behaviour, or refactors the user did not ask for. Routes extra ideas into a follow-up list instead of the diff."
+version: 0.1.0
 ---
 
 # Scope guard

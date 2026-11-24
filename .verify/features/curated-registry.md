@@ -1,6 +1,6 @@
 # curated-registry
 
-Summary: agent-registry is the central index of curated skill packages, DAG workflows, and developer utilities for the Autonomic stack.
+Summary: pinakes is the central index of curated skill packages, DAG workflows, and developer utilities for the Autonomic stack.
 
 ## Sub-features
 
@@ -10,14 +10,21 @@ Summary: agent-registry is the central index of curated skill packages, DAG work
   - Outcome: Resolving the `agstack` alias through this index returns its source. Not verified in this pass.
 - `agstack-package`: Ships the agstack engineering process as an installable package.
   - Intent: Give every agent the same verification and process standards.
-  - Behaviour: `packages/agstack/` holds the playbooks, the verification skill, and the strict-verification layout.
+  - Behaviour: `packages/agstack/` holds the SDLC playbooks, principles, subagent orchestration (`orchestrate`, `swarm`, `agents/`), and the strict-verification layout. `packages/agstack-ui/` carries the UI skills and UI playbooks as a separate optional install.
   - Outcome: Installed agents read the same process files. Not verified in this pass.
 - `dag-workflows`: Defines the bugfix, feature, stacked-PR, release-notes, and MCP health workflows as YAML DAGs.
   - Intent: Let agents run the same multi-step process with or without agent-spine.
-  - Behaviour: The files in `workflows/` run under `agent-spine run workflows/<name>.yaml` or `scripts/run-workflow.sh run workflows/<name>.yaml` (no Spine).
-  - Outcome: Each workflow reaches its gate. Not verified in this pass.
+  - Behaviour: The files in `workflows/` run under `thesmos run workflows/<name>.yaml` or `scripts/run-workflow.sh run workflows/<name>.yaml` (no Spine). The standalone runner executes a single linear chain; `validate` rejects cycles and fan-out.
+  - Outcome: `.verify/run.sh` validates every workflow's structure. Verified via workflow validation in `.verify/run.sh`.
 - `utility-catalog`: Lists the developer utilities.
   - Behaviour: `utilities/utilities.json`.
+- `eval-harness`: A/B-rigs skills against fixture tasks before promotion.
+  - Behaviour: `packages/agstack/eval/tasks/` holds fixture+hidden-check tasks including backend-realistic ones (`incident-from-logs`, `migration-rollback`, `concurrency-race`, `flaky-test`, `perf-regression`). `eval/run.sh` runs `claude -p` under four conditions; `eval/gate.sh` promotes only measured improvements.
+  - Outcome: Hidden checks verified by construction; gated runs recorded in `.verify/artifacts/eval/results.tsv`.
+- `incident-lifecycle`: Operate/Maintain playbooks for outage mitigation and blameless writeups.
+  - Behaviour: `playbooks/incident.md` (mitigate → freeze evidence → probe → hand off) and `playbooks/postmortem.md` (timeline → proven root cause → causal chain → action items), routed from `agstack-mode`.
+- `watch-pr`: Typed GitHub PR/stack watcher tool inside `skills/watch-pr/` (bun + `gh`), wired into the `babysit` playbook.
+- `self-verification`: `.verify/verify.toml` allowlists `sh .verify/run.sh` so `tekmor verify` can issue receipts on pinakes itself.
 
 ## Code
 
@@ -34,7 +41,8 @@ Summary: agent-registry is the central index of curated skill packages, DAG work
 
 ## Verification Suites (Targeted Test Commands)
 
-- Not defined in this repository's allowlist for this pass.
+- `sh .verify/run.sh`: jq-validates root manifests, structurally validates every `workflows/*.yaml`, and lints agstack and agstack-ui skills.
+- `tekmor verify`: receipts via `.verify/verify.toml`.
 
 ## Gotchas
 

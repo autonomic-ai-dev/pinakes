@@ -1,6 +1,7 @@
 ---
 name: progress-report
 description: "Report progress on a multi-step task so the user can act on it. Use for any task that will take more than a few steps, at each milestone, when blocked, and when handing back work. Gives state, evidence, and the next decision, in a fixed shape."
+version: 0.1.0
 ---
 
 # Progress report

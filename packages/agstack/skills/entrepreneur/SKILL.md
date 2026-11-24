@@ -2,6 +2,7 @@
 name: entrepreneur
 description: "Minimalist entrepreneur journey advisor and framework (Sahil Lavingia). Guides business ideas, community discovery, problem validation, manual processizing, weekend MVPs, first 100 customer sales, pricing models, content marketing, sustainable growth, and company culture. Automatically activates when discussing business ideas, startups, revenue, customer validation, or pricing."
 disable-model-invocation: true
+version: 0.1.0
 ---
 
 # Entrepreneur: The Minimalist Entrepreneur Journey

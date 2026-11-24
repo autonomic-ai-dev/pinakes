@@ -1,6 +1,7 @@
 ---
 name: benchmark-checklist
 description: "Vet a performance measurement before reporting or acting on it: the limiter, whether it was tuned, error counts, repeatability, whether it matters end to end, and whether the work happened. Use whenever you run a benchmark or report a speedup or regression."
+version: 0.1.0
 ---
 
 # Benchmark checklist
