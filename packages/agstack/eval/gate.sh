@@ -22,7 +22,7 @@ summary() {
   awk -F'\t' -v c="$1" -v t="$2" '
     (t == "all" || $1 == t) && $2 == c {
       n++
-      if ($4 == 0) pass++
+      if ($4 == 0 && ($12 == "PASS" || $12 == "na" || $12 == "")) pass++
       turns += $7
       if ($6 > 0) edits++
     }
