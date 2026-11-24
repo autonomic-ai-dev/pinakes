@@ -15,6 +15,7 @@ jq -r '
     elif .name == "Read" and ((.input.file_path // "") | test("/skills/[^/]+/SKILL[.]md$")) then
       "read " + (.input.file_path | split("/") | .[-2])
     elif .name == "Skill" then "read " + (.input.skill // "")
+    elif .name == "TodoWrite" then "read plan"
     elif .name == "Edit" or .name == "Write" or .name == "MultiEdit" or .name == "NotebookEdit" then "edit"
     else empty end
 ' "$1" | awk -v spec="$2" '

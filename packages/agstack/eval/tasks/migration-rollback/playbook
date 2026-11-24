@@ -1,3 +1,4 @@
+plan before
 database-migration before
 token-efficiency before
 no-comments before

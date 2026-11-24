@@ -46,6 +46,7 @@ agstack/
 │   ├── agstack-mode/                    # SDLC playbook orchestrator
 │   │   ├── SKILL.md                     #   routing table, subagents section, trust contract
 │   │   ├── worker.md                    #   worker kickoff contract (context is authoritative)
+│   │   ├── agents/                      #   subagent definitions (agstack-agent, comment-sicko)
 │   │   └── playbooks/                   # feature, bug-fix, incident, postmortem, babysit, etc.
 │   ├── orchestrate/                     # Planner-tree subagent orchestration
 │   │   ├── SKILL.md
@@ -76,7 +77,6 @@ agstack/
 │       ├── fix-root-causes/
 │       └── never-block-on-human/
 │
-├── agents/                              # Subagent definitions (agstack-agent, comment-sicko)
 ├── eval/                                # Skill-evolution gate: fixture tasks, hidden checks, A/B runs
 ├── docs/guide/                          # Onboarding guide
 ├── TRUST.md                             # What the machinery proves; candidate set
