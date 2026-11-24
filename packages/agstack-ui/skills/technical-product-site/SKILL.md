@@ -1,6 +1,6 @@
 ---
 name: technical-product-site
-description: "Design and build high-conviction, developer-targeted product websites and technical documentation. Covers evidence-grounded copy (zero unverified claims), obsidian tactile bento grids, continuous orange conduit & runner badge motion architecture, bidirectional scroll reactivity, SSR-first rolling animated numbers, sliding spring pill tabs, single-rail changelogs, developer docs, and rock-solid responsive navigation."
+description: "Design and build high-conviction, developer-targeted product websites and docs. Covers evidence-grounded copy (zero unverified claims), obsidian tactile bento grids, continuous conduit & runner badge motion, bidirectional scroll reactivity, rolling animated numbers, spring pill tabs, single-rail changelogs, and solid responsive navigation."
 version: 0.1.0
 ---
 

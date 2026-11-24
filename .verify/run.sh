@@ -25,4 +25,9 @@ bash packages/agstack/scripts/skill-lint.sh packages/agstack-ui/skills
 echo "==> Linting agstack-founder skills"
 bash packages/agstack/scripts/skill-lint.sh packages/agstack-founder/skills
 
+for map in .verify/features/*.md; do
+  echo "==> Checking feature map: $map"
+  sh packages/agstack/skills/feature-map/scripts/map_check.sh "$map"
+done
+
 echo "==> [pinakes] Verification passed cleanly (exit 0)."
