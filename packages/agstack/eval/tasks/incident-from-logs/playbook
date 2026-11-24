@@ -1,3 +1,4 @@
-context-and-intent before
+plan before
 incident before
-code-review after
+token-efficiency before
+no-comments before
