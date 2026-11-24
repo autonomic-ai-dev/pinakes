@@ -15,6 +15,11 @@
       "description": "agstack-ui — UI design, pixel-fidelity, responsive, and UI testing skills (companion to agstack core)",
       "recommend_boost": 0.20
     },
+    "agstack-founder": {
+      "path": "packages/agstack-founder",
+      "description": "agstack-founder — entrepreneurship and executive-review skills (companion to agstack core)",
+      "recommend_boost": 0.15
+    },
     "matt-skills": {
       "git_url": "https://github.com/mattpocock/skills.git",
       "git_ref": "main",

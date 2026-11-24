@@ -22,5 +22,7 @@ bash packages/agstack/scripts/skill-lint.sh
 
 echo "==> Linting agstack-ui skills"
 bash packages/agstack/scripts/skill-lint.sh packages/agstack-ui/skills
+echo "==> Linting agstack-founder skills"
+bash packages/agstack/scripts/skill-lint.sh packages/agstack-founder/skills
 
 echo "==> [pinakes] Verification passed cleanly (exit 0)."

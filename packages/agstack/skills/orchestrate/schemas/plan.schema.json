@@ -148,6 +148,37 @@
                 "type": "string",
                 "description": "Optional markdown verification plan."
               },
+              "context": {
+                "type": "object",
+                "properties": {
+                  "featureMaps": {
+                    "type": "array",
+                    "items": {
+                      "type": "string"
+                    },
+                    "description": "Paths to .verify/features/*.md covering the touched area; worker reads them before editing."
+                  },
+                  "readFirst": {
+                    "type": "array",
+                    "items": {
+                      "type": "string"
+                    },
+                    "description": "Files and docs to read before acting: interfaces, invariants, upstream artifacts."
+                  },
+                  "invariants": {
+                    "type": "array",
+                    "items": {
+                      "type": "string"
+                    },
+                    "description": "One-line rules the worker must preserve, lifted from feature-map Gotchas or AGENTS.md."
+                  },
+                  "packet": {
+                    "type": "string",
+                    "description": "Path to a .verify/context/<task>.md packet produced by the context-and-intent playbook."
+                  }
+                },
+                "description": "Prepared context the worker reads first; authoritative over rediscovery."
+              },
               "startingRef": {
                 "type": "string",
                 "description": "Branch the spawned cloud agent clones from."
@@ -306,6 +337,37 @@
                 "type": "string",
                 "description": "Optional markdown verification plan."
               },
+              "context": {
+                "type": "object",
+                "properties": {
+                  "featureMaps": {
+                    "type": "array",
+                    "items": {
+                      "type": "string"
+                    },
+                    "description": "Paths to .verify/features/*.md covering the touched area; worker reads them before editing."
+                  },
+                  "readFirst": {
+                    "type": "array",
+                    "items": {
+                      "type": "string"
+                    },
+                    "description": "Files and docs to read before acting: interfaces, invariants, upstream artifacts."
+                  },
+                  "invariants": {
+                    "type": "array",
+                    "items": {
+                      "type": "string"
+                    },
+                    "description": "One-line rules the worker must preserve, lifted from feature-map Gotchas or AGENTS.md."
+                  },
+                  "packet": {
+                    "type": "string",
+                    "description": "Path to a .verify/context/<task>.md packet produced by the context-and-intent playbook."
+                  }
+                },
+                "description": "Prepared context the worker reads first; authoritative over rediscovery."
+              },
               "startingRef": {
                 "type": "string",
                 "description": "Branch the spawned cloud agent clones from."
@@ -463,6 +525,37 @@
               "verify": {
                 "type": "string",
                 "description": "Optional markdown verification plan."
+              },
+              "context": {
+                "type": "object",
+                "properties": {
+                  "featureMaps": {
+                    "type": "array",
+                    "items": {
+                      "type": "string"
+                    },
+                    "description": "Paths to .verify/features/*.md covering the touched area; worker reads them before editing."
+                  },
+                  "readFirst": {
+                    "type": "array",
+                    "items": {
+                      "type": "string"
+                    },
+                    "description": "Files and docs to read before acting: interfaces, invariants, upstream artifacts."
+                  },
+                  "invariants": {
+                    "type": "array",
+                    "items": {
+                      "type": "string"
+                    },
+                    "description": "One-line rules the worker must preserve, lifted from feature-map Gotchas or AGENTS.md."
+                  },
+                  "packet": {
+                    "type": "string",
+                    "description": "Path to a .verify/context/<task>.md packet produced by the context-and-intent playbook."
+                  }
+                },
+                "description": "Prepared context the worker reads first; authoritative over rediscovery."
               },
               "startingRef": {
                 "type": "string",

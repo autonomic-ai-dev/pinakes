@@ -46,6 +46,9 @@ Planning rules:
 - One worker can carry a lot. Subagents have long runtime budgets: multi-file slices, multi-step refactors, full repro/fix/test cycles all fit in a single spawn. Each spawn costs coordination overhead. Default to fewer, broader workers; reach for finer granularity only when a slice is genuinely independent or has real contention risk.
 - **Default to verifiers.** Use `type: "verifier"` and `verifies: "<target-task-name>"`. A verifier replays its target's acceptance criteria against the real artifact — that is the trust loop, not a self-report.
 - Use `verify` for the concrete check recipe. Workers read it as target behavior; verifiers inherit it from their target.
+- **Prepare context, not just spec.** Before publishing a task, run `scripts/maps_for.sh <path-prefix>...` (or `grep -l` over `.verify/features/*.md`) to find the feature maps covering `pathsAllowed`. Put them in `context.featureMaps`, lift each map's Gotchas into `context.invariants`, and prefer the map's Verification Suites for `verify`/`acceptance` over re-authored checks. Put interfaces and upstream artifacts in `context.readFirst`.
+- **A packet beats a paste.** When the context-and-intent pass produced `.verify/context/<task>.md`, reference it via `context.packet` instead of re-pasting it into `prompt`.
+- **Verifiers check map freshness.** When a target's `pathsAllowed` overlap a feature map, the verifier's findings include whether the map still matches the code. A stale map becomes a follow-up task, not a silent gap.
 - Add `measurements[]` for quantitative claims. The executor reruns each command on the worker's branch after handoff and flags drift.
 - Keep fan-in small. If a task needs many upstream handoffs, publish an aggregation worker first.
 - Minimize path overlap. List forbidden paths when sibling ownership matters.
