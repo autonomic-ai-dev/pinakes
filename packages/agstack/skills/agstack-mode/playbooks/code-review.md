@@ -40,3 +40,6 @@ Use this playbook before declaring any task complete, opening a pull request, or
   - `Verdict: Ship.` or `Verdict: Fix X and Y first.`
   - `Lean: -<N> lines possible.`
   - Complete evidence record with exit codes and measured coverage.
+
+### Step 5: Handoff
+- On Must-Fix defects: read `playbooks/bug-fix.md` and follow it for each one. On a clean pass that ships: read `playbooks/pull-request.md`. If the next phase is out of scope, say so and name the artifact left for it.

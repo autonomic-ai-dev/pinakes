@@ -7,7 +7,9 @@
 
 ## 1. Session Anchor & TodoList Contract
 
-Before authoring code, emit the Session Anchor and copy these 6 steps verbatim into your active plan:
+Before authoring code, emit the Session Anchor and copy these 7 steps verbatim into your active plan:
+
+Before anything else — before exploring, before the first Edit/Write or state-changing Bash — complete this ritual: read `../token-efficiency/SKILL.md` and `../no-comments/SKILL.md`, call the task tool (`TaskCreate`/`TodoWrite`), and copy the steps below in as tasks. Narrating a plan or reading the refs after the first edit is a protocol breach, not compliance.
 
 ```markdown
 > **Session Anchor:**
@@ -21,6 +23,7 @@ Before authoring code, emit the Session Anchor and copy these 6 steps verbatim i
 - [ ] Step 4: Implement behavior via TDD (write unit tests first, minimal implementation)
 - [ ] Step 5: Pair with functional verification suites (Hurl / API contracts)
 - [ ] Step 6: Execute default post-dev verification via `agstack` `verification` skill (`.verify/run.sh`)
+- [ ] Step 7: Execute the handoff — read `playbooks/test-suite-generation.md` when coverage gaps remain, then `playbooks/code-review.md` for the adversarial pass. If either is out of scope this session, say so and name the artifact left for it.
 
 ---
 
