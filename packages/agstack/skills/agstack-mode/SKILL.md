@@ -83,6 +83,7 @@ Match the user's intent to one playbook. Read it in full before touching code. R
 
 | Phase | Intent | Scope | Playbook |
 |---|---|---|---|
+| — | **Pipeline** | How playbooks chain: what each receives, produces, and hands to next | [`references/sdlc-lifecycle.md`](references/sdlc-lifecycle.md) |
 | Request | **Context & intent** | Parsing ambiguous prompts, user intent, or large codebases | [`playbooks/context-and-intent.md`](playbooks/context-and-intent.md) |
 | Request | **Investigation** | Unknown root causes, repro synthesis, bug isolation | [`playbooks/investigation.md`](playbooks/investigation.md) |
 | Request | **Architecture** | Multi-phase programs and stacked PR initiatives | [`playbooks/multi-phase-plan.md`](playbooks/multi-phase-plan.md) |
