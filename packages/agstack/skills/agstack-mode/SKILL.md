@@ -20,7 +20,7 @@ Do these steps in order. Do not skip one because the task looks small.
 4. **Pick the playbook.** Match the intent in the Routing table below, then read that playbook in full and copy its numbered steps into your plan. No match: use `investigation`, and say why.
 5. **Load the principles the task triggers.** Each principle's `SKILL.md` lists when it applies. Read only those you need. Cite only principles you read this session.
 6. **Execute the playbook.** For any code edit, the smallest complete change comes first. Before writing new code, check in this order: does it need to exist, does the repo already have it, does the standard library or an installed dependency cover it, and is a one-line answer enough.
-7. **Verify.** Any code change is incomplete until `skills/verification` passes through the `.verify/` allowlist, with artifacts under `.verify/artifacts/`. When `agstack-ui` is installed, any UI change also needs its pixel-fidelity, responsive, and layered UI-test checks. Never ask "should I run tests?".
+7. **Verify.** Any code change is incomplete until `skills/verification` passes through the `.verify/` allowlist, with artifacts under `.verify/artifacts/`. When `agstack-ui` is installed, any UI change also needs its pixel-fidelity, responsive, and layered UI-test checks. When `tekmor` is installed, receipt the gate: `tekmor verify -- sh .verify/run.sh` and cite the receipt id in the evidence record. Never ask "should I run tests?".
 8. **Report.** Use the reply format below.
 
 Before any verification suite or test harness, output the session anchor:
@@ -161,5 +161,5 @@ The difference between agstack and prompt folklore is proof:
 - Lead with the answer or the change. No filler.
 - **Changed:** files and what changed in each, in one line each.
 - **Principles:** each principle that shaped a decision, and the decision it changed.
-- **Evidence:** commands with exit codes, and artifact paths under `.verify/artifacts/`.
+- **Evidence:** commands with exit codes, artifact paths under `.verify/artifacts/`, and the tekmor receipt id when tekmor issued one.
 - **Not run:** any step that could not run, why, and what would unblock it.
