@@ -9,6 +9,8 @@
 
 Before modifying code, emit the Session Anchor and copy these 5 steps verbatim into your active plan:
 
+Before anything else — before exploring, before the first Edit/Write or state-changing Bash — complete this ritual: read `../token-efficiency/SKILL.md` and `../no-comments/SKILL.md`, call the task tool (`TaskCreate`/`TodoWrite`), and copy the steps below in as tasks. Narrating a plan or reading the refs after the first edit is a protocol breach, not compliance.
+
 ```markdown
 > **Session Anchor:**
 > - **Target Output Root**: `.verify/` (fixtures in `verify/` remain strictly read-only)
