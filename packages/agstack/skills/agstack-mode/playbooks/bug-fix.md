@@ -58,7 +58,7 @@ Before modifying code, emit the Session Anchor and copy these 6 steps verbatim i
 - Verify that both unit tests and functional contracts pass cleanly. Proof logs go to `.verify/artifacts/`.
 
 ### Step 6: Code Hygiene & Evidence Record
-- Run `check-added-comments.sh` and `check-verify-separation.sh`.
+- Run `../scripts/check-added-comments.sh` and `../scripts/check-verify-separation.sh`.
 - Deliver the final evidence record.
 
 ---

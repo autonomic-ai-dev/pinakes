@@ -119,16 +119,16 @@ For developers or environments where a shell utility is preferred, `agstack` pro
 
 ```bash
 # Validate any workflow YAML
-bash packages/agstack/scripts/run-workflow.sh validate workflows/feature.yaml
+bash scripts/run-workflow.sh validate workflows/feature.yaml
 
 # Inspect workflow structure and node sequence
-bash packages/agstack/scripts/run-workflow.sh inspect workflows/bugfix.yaml
+bash scripts/run-workflow.sh inspect workflows/bugfix.yaml
 
 # Run workflow interactively
-bash packages/agstack/scripts/run-workflow.sh run workflows/bugfix.yaml
+bash scripts/run-workflow.sh run workflows/bugfix.yaml
 
 # Run with auto-approval for non-interactive CI runs
-bash packages/agstack/scripts/run-workflow.sh run workflows/bugfix.yaml --auto-approve
+bash scripts/run-workflow.sh run workflows/bugfix.yaml --auto-approve
 ```
 
 ---

@@ -20,13 +20,13 @@ jobs:
       - name: Validate Workflow DAGs
         run: |
           for workflow in workflows/*.yaml; do
-            python3 packages/agstack/scripts/run-workflow.py validate "$workflow"
+            python3 packages/agstack/skills/workflow-engine/scripts/run-workflow.py validate "$workflow"
           done
 
       - name: Check Zero Added Comments
         run: |
-          bash packages/agstack/scripts/check-added-comments.sh
+          bash packages/agstack/skills/agstack-mode/scripts/check-added-comments.sh
 
       - name: Check Verification Separation
         run: |
-          bash packages/agstack/scripts/check-verify-separation.sh
+          bash packages/agstack/skills/agstack-mode/scripts/check-verify-separation.sh

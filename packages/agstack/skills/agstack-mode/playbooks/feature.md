@@ -73,7 +73,7 @@ Before authoring code, emit the Session Anchor and copy these 6 steps verbatim i
   ```bash
   sh .verify/run.sh <feature>
   ```
-- Run static checks including `checks/feature_coverage.sh` to ensure 1:1 step coverage.
+- Run static checks including `../../feature-map/scripts/feature_coverage.sh` to ensure 1:1 step coverage.
 - If any gate fails, stop and fix the cause. Never weaken tests.
 
 ---

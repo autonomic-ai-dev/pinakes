@@ -10,7 +10,7 @@ Use this playbook before declaring any task complete, opening a pull request, or
 - Inspect `git diff` against `master`:
   - Check that only intended files were modified.
   - Verify no accidental edits, temporary debug logs, or commented-out corpses exist.
-  - Run `scripts/check-added-comments.sh` to guarantee no AI narration comments were introduced.
+  - Run `../scripts/check-added-comments.sh` to guarantee no AI narration comments were introduced.
 
 ### Step 2: Adversarial Security, Concurrency & Lean Audit
 - Ground in `security-audit`, `jailbreak-defense`, `interrogate`, and `token-efficiency`:

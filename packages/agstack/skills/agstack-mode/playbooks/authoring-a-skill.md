@@ -19,7 +19,7 @@ Before authoring skills, emit the Session Anchor and copy these 5 steps verbatim
 - [ ] Step 2: Author YAML frontmatter (`name`, `description`)
 - [ ] Step 3: Write concise, actionable instructions and non-negotiable invariants
 - [ ] Step 4: Extract voluminous reference tables or scripts into `references/` or `scripts/`
-- [ ] Step 5: Lint the skill with `sh scripts/skill-lint.sh` and verify with `.verify/run.sh`
+- [ ] Step 5: Lint the skill with `sh ../scripts/skill-lint.sh` and verify with `.verify/run.sh`
 
 ---
 
@@ -37,7 +37,7 @@ Before authoring skills, emit the Session Anchor and copy these 5 steps verbatim
 2. **Author SKILL.md:** Include valid YAML frontmatter and clear operational instructions.
 3. **Structure Subdirectories:** Place executable helpers in `scripts/` and extended reading in `references/`.
 4. **Validation:** Validate that markdown syntax is valid and free of broken links.
-5. **Index & Probe:** Run `sh scripts/skill-lint.sh` and confirm the skill appears in the routing table.
+5. **Index & Probe:** Run `sh ../scripts/skill-lint.sh` and confirm the skill appears in the routing table.
 
 ---
 

@@ -12,7 +12,7 @@ Use this playbook whenever you are preparing, chunking, and opening a ready pull
   git status
   git diff master
   ```
-- Verify zero unintentional changes, no stray debug logs, no commented-out code, and no newly introduced narration comments (`scripts/check-added-comments.sh`).
+- Verify zero unintentional changes, no stray debug logs, no commented-out code, and no newly introduced narration comments (`../scripts/check-added-comments.sh`).
 - Confirm all touched files are necessary. Squeeze out unnecessary lines (`skills/token-efficiency/`).
 
 ### Step 2: Atomic Chunked Commits

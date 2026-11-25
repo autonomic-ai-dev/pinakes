@@ -10,7 +10,7 @@ Every rule in agstack belongs to one class. The class says how far the rule can 
 
 | Rule | Gate |
 |---|---|
-| No new comments in changed code | `scripts/check-added-comments.sh` |
+| No new comments in changed code | `skills/agstack-mode/scripts/check-added-comments.sh` |
 | Verification must run through the allowlist | `.verify/run.sh` in the repository |
 | Runtime artifacts stay under `.verify/`, fixtures stay read-only | `scripts/check-verify-separation.sh` |
 | Skill frontmatter, names, and word budgets | `scripts/skill-lint.sh` (run from `.verify/run.sh`) |

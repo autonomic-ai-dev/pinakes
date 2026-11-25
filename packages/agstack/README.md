@@ -83,13 +83,16 @@ agstack/
 ├── ENFORCEMENT.md                       # Enforcement classes
 ├── EVOLUTION.md / CHANGELOG.md          # Skill promotion doctrine + history
 │
-└── scripts/
-    ├── check-added-comments.sh          # Git pre-commit comment linter
-    ├── install-git-hook.sh              # Hook installer
-    ├── maps_for.sh                      # Feature-map lookup for context packets
+└── scripts/                             # Package-level eval/CI tooling (not shipped with skills)
     ├── playbook-check.sh                # Eval enforcement: required playbook was read
-    ├── run-workflow.py                  # Portable DAG workflow engine
-    └── run-workflow.sh                  # Shell wrapper for standalone workflow execution
+    ├── skill-trace.sh / skill-usage.sh  # Skill usage analytics
+    └── sync-host-policy.sh              # Sync AGENTS.md into platforms/* host copies
+
+# Skill-bundled tools ship inside their skill dir (installed via skills add):
+#   skills/agstack-mode/scripts/     # check-added-comments, check-verify-separation,
+#                                  # maps_for, install-git-hook, skill-lint
+#   skills/workflow-engine/scripts/  # run-workflow.sh + run-workflow.py
+#   skills/skill-feedback/scripts/   # skill-feedback.sh
 ```
 
 Companion packages (installed separately, prompted for when routed to and absent): `agstack-ui` (interface work), `agstack-founder` (entrepreneurship and executive reviews).
