@@ -32,7 +32,7 @@ Before touching anything, emit the Session Anchor and copy these 6 steps verbati
 - [ ] Step 3: Mitigate by the fastest reversible lever (rollback, feature flag, restart, scale)
 - [ ] Step 4: Confirm mitigation with a live probe, not a log glance
 - [ ] Step 5: Isolate root cause on the preserved evidence, not on the mutated system
-- [ ] Step 6: Write the incident note and hand off to `postmortem` or `bug-fix`
+- [ ] Step 6: Write the incident note, then execute the handoff — read `playbooks/bug-fix.md` and follow it for the root-cause repair with regression test, then read `playbooks/postmortem.md` for the blameless record. Writing "hand off to X" in the note is not the handoff.
 
 ---
 
