@@ -10,7 +10,7 @@ Summary: pinakes is the central index of curated skill packages, DAG workflows, 
   - Outcome: Resolving the `agstack` alias through this index returns its source. Not verified in this pass.
 - `agstack-package`: Ships the agstack engineering process as an installable package.
   - Intent: Give every agent the same verification and process standards.
-  - Behaviour: `packages/agstack/` holds the backend/DevOps SDLC playbooks, principles, subagent orchestration (`orchestrate`, `swarm`, `agents/`), the context-packet seam (`context` in plan.schema.json, `.verify/context/`, `scripts/maps_for.sh`), and the strict-verification layout. `packages/agstack-ui/` carries the UI skills and `packages/agstack-founder/` carries entrepreneurship/executive-review skills as separate optional installs; routing to an absent package prompts for installation.
+  - Behaviour: `packages/agstack/` holds the backend/DevOps SDLC playbooks, principles, subagent orchestration (`orchestrate`, `swarm`, `agents/`), the context-packet seam (`context` in plan.schema.json, `.verify/context/`, `skills/agstack-mode/scripts/maps_for.sh`), and the strict-verification layout. `packages/agstack-ui/` carries the UI skills and `packages/agstack-founder/` carries entrepreneurship/executive-review skills as separate optional installs; routing to an absent package prompts for installation.
   - Outcome: Installed agents read the same process files. Not verified in this pass.
 - `dag-workflows`: Defines the bugfix, feature, stacked-PR, release-notes, and MCP health workflows as YAML DAGs.
   - Intent: Let agents run the same multi-step process with or without agent-spine.

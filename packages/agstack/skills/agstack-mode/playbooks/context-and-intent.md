@@ -23,5 +23,5 @@ Use this playbook at the beginning of any complex task to understand the existin
 
 ### Step 4: Record Findings in a Mental Model
 - State the intent, existing patterns, and constraints in 2-3 clear sentences before proceeding to design or code.
-- When the findings will drive delegated or multi-step work, write them to `.verify/context/<task>.md`: intent, touchpoints with file links, the feature maps covering the area (`scripts/maps_for.sh`), invariants to preserve, acceptance checks, and explicit non-goals. Orchestrated tasks consume it via `context.packet`; workers read it instead of repeating this pass.
+- When the findings will drive delegated or multi-step work, write them to `.verify/context/<task>.md`: intent, touchpoints with file links, the feature maps covering the area (`../scripts/maps_for.sh`), invariants to preserve, acceptance checks, and explicit non-goals. Orchestrated tasks consume it via `context.packet`; workers read it instead of repeating this pass.
 - If there is an unresolved ambiguity, formulate an empirical test or check to settle it autonomously (`principle-never-block-on-human`).

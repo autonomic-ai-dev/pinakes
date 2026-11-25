@@ -33,5 +33,5 @@ AI coding agents tend to generate noisy, redundant comments that narrate the obv
 
 ## Enforcement
 
-- Pre-commit hook: `scripts/check-added-comments.sh` checks staged diffs for newly introduced narration comments.
+- Pre-commit hook: `../agstack-mode/scripts/check-added-comments.sh` checks staged diffs for newly introduced narration comments.
 - Before completing any task, review the diff against `master` and strip any newly added conversational comments.

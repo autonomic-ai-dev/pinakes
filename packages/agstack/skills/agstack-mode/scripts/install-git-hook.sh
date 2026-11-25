@@ -5,15 +5,15 @@ script_dir="$(cd "$(dirname "$0")" && pwd)"
 hooks_dir="$root/.git/hooks"
 if [[ ! -d "$hooks_dir" ]]; then
   echo "Git hooks directory not found (worktree or custom core.hooksPath may be configured)." >&2
-  echo "Install scripts/check-added-comments.sh through your repository's hook manager instead." >&2
+  echo "Install skills/agstack-mode/scripts/check-added-comments.sh through your repository's hook manager instead." >&2
   exit 2
 fi
 hook="$hooks_dir/pre-commit"
 if [[ -e "$hook" ]]; then
   echo "Existing pre-commit hook found: $hook" >&2
   echo "Not overwriting it. Merge these checks into your existing hook manually:" >&2
-  echo '  "<path-to-bundle>/scripts/check-added-comments.sh" --staged' >&2
-  echo '  "<path-to-bundle>/scripts/check-verify-separation.sh" --staged' >&2
+  echo '  "<path-to-bundle>/skills/agstack-mode/scripts/check-added-comments.sh" --staged' >&2
+  echo '  "<path-to-bundle>/skills/agstack-mode/scripts/check-verify-separation.sh" --staged' >&2
   exit 1
 fi
 cat > "$hook" <<HOOK

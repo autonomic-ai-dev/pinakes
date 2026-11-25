@@ -17,4 +17,4 @@ jobs:
       - name: Check added comment-like lines
         env:
           BASE_REF: origin/${{ github.base_ref }}
-        run: ./scripts/check-added-comments.sh --base "$BASE_REF"
+        run: ./skills/agstack-mode/scripts/check-added-comments.sh --base "$BASE_REF"

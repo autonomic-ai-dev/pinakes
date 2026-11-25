@@ -4,4 +4,4 @@ set -euo pipefail
 SCRIPT_DIR="$(cd "$(dirname "${BASH_SOURCE[0]}")" && pwd)"
 REPO_ROOT="$(cd "$SCRIPT_DIR/.." && pwd)"
 
-exec "$REPO_ROOT/packages/agstack/scripts/run-workflow.sh" "$@"
+exec "$REPO_ROOT/packages/agstack/skills/workflow-engine/scripts/run-workflow.sh" "$@"

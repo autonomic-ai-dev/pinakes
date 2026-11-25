@@ -34,7 +34,7 @@ Before modifying branches, emit the Session Anchor and copy these 5 steps verbat
 
 ## 3. Checklist Steps
 
-1. **State Audit:** Query PR status using `gh pr view <number>` or `gh pr checks <number>`. Download logs of failed checks to `.verify/artifacts/ci-failure.log`. For continuous watching, use `skills/watch-pr/scripts/watch-pr --pr <n>` (or `--queued-stack --stack-prs <n,...>` for a landing stack; `--status-only` prints one table and exits).
+1. **State Audit:** Query PR status using `gh pr view <number>` or `gh pr checks <number>`. Download logs of failed checks to `.verify/artifacts/ci-failure.log`. For continuous watching, use `../../watch-pr/scripts/watch-pr --pr <n>` (or `--queued-stack --stack-prs <n,...>` for a landing stack; `--status-only` prints one table and exits).
 2. **Local Reproduction:** Execute the matching verification command locally. Confirm reproducing failure.
 3. **Fix & Rebase:**
    - Apply minimal root-cause fix.
