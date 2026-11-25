@@ -12,10 +12,10 @@ jq -r '
   | select(.type == "tool_use")
   | if .name == "Read" and ((.input.file_path // "") | test("/playbooks/[^/]+[.]md$")) then
       "read " + (.input.file_path | split("/") | last | rtrimstr(".md"))
-    elif .name == "Read" and ((.input.file_path // "") | test("/skills/[^/]+/SKILL[.]md$")) then
+    elif .name == "Read" and ((.input.file_path // "") | test("/skills/.*SKILL[.]md$")) then
       "read " + (.input.file_path | split("/") | .[-2])
     elif .name == "Skill" then "read " + (.input.skill // "")
-    elif .name == "TodoWrite" then "read plan"
+    elif (.name == "TodoWrite" or .name == "TaskCreate" or .name == "TaskUpdate" or .name == "TaskList") then "read plan"
     elif .name == "Edit" or .name == "Write" or .name == "MultiEdit" or .name == "NotebookEdit" then "edit"
     else empty end
 ' "$1" | awk -v spec="$2" '
