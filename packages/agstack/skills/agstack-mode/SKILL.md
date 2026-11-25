@@ -12,7 +12,7 @@ agstack is a fixed path, not a menu. Every invocation runs the **Core path** in 
 
 Do these steps in order. Do not skip one because the task looks small.
 
-1. **Select.** Match the task's intent to a row of the Routing table below. Read the chosen playbook in full. The non-negotiables in `AGENTS.md` apply to every task.
+1. **Select.** Match the task's intent to a row of the Routing table below and read the chosen playbook file in full. Loading this skill without reading a playbook is a protocol breach — every task has a row, and the playbook file must be opened before any `Edit`/`Write`. The non-negotiables in `AGENTS.md` apply to every task.
 2. **Load the core references.** For any task that edits code, read these two files in full before the first `Edit`/`Write` call. Reading them after the first edit is a protocol breach, not compliance. Read-only answers skip them:
    - `../token-efficiency/SKILL.md`: rethink whether code is needed, reuse existing code, minimise blast radius, and keep context reads bounded.
    - `../no-comments/SKILL.md`: add no comments unless the user asks.
