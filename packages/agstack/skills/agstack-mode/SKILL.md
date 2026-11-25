@@ -12,14 +12,14 @@ agstack is a fixed path, not a menu. Every invocation runs the **Core path** in 
 
 Do these steps in order. Do not skip one because the task looks small.
 
-1. **Select.** Match the task's intent to a row of the Routing table below. Read the chosen playbook in full. The non-negotiables in `AGENTS.md` apply to every task.
-2. **Load the core references.** For any task that edits code, read these two files in full before the first edit. Read-only answers skip them:
+1. **Select.** Match the task's intent to a row of the Routing table below and read the chosen playbook file in full. Loading this skill without reading a playbook is a protocol breach — every task has a row, and the playbook file must be opened before any `Edit`/`Write`. The non-negotiables in `AGENTS.md` apply to every task.
+2. **Load the core references.** For any task that edits code, read these two files in full before the first `Edit`/`Write` call. Reading them after the first edit is a protocol breach, not compliance. Read-only answers skip them:
    - `../token-efficiency/SKILL.md`: rethink whether code is needed, reuse existing code, minimise blast radius, and keep context reads bounded.
    - `../no-comments/SKILL.md`: add no comments unless the user asks.
 3. **Search before reading.** Use grep or ripgrep to find the relevant lines, then read only that bounded range. Do not read whole large files.
-4. **Pick the playbook.** Match the intent in the Routing table below, then read that playbook in full and copy its numbered steps into your plan. No match: use `investigation`, and say why.
+4. **Pick the playbook.** Match the intent in the Routing table below, then read that playbook in full and hydrate it: before the first edit or state-changing Bash, call the task tool (`TaskCreate`/`TodoWrite`, whichever this host exposes) and copy the playbook's numbered steps in as tasks. Narrating a plan in your reply does not satisfy this step — the tool call is the compliance. No match: use `investigation`, and say why.
 5. **Load the principles the task triggers.** Each principle's `SKILL.md` lists when it applies. Read only those you need. Cite only principles you read this session.
-6. **Execute the playbook.** For any code edit, the smallest complete change comes first. Before writing new code, check in this order: does it need to exist, does the repo already have it, does the standard library or an installed dependency cover it, and is a one-line answer enough.
+6. **Execute the playbook.** For any code edit, the smallest complete change comes first. Before writing new code, check in this order: does it need to exist, does the repo already have it, does the standard library or an installed dependency cover it, and is a one-line answer enough. When the playbook's deliverable hands off to another playbook (its lifecycle block names one, or `references/sdlc-lifecycle.md` maps the edge), read that playbook file before producing the deliverable — the chain continues until the lifecycle is done.
 7. **Verify.** Any code change is incomplete until `skills/verification` passes through the `.verify/` allowlist, with artifacts under `.verify/artifacts/`. When `agstack-ui` is installed, any UI change also needs its pixel-fidelity, responsive, and layered UI-test checks. When `tekmor` is installed, receipt the gate: `tekmor verify -- sh .verify/run.sh` and cite the receipt id in the evidence record. Never ask "should I run tests?".
 8. **Report.** Use the reply format below.
 
