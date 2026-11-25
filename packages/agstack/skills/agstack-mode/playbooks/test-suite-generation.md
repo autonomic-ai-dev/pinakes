@@ -42,3 +42,6 @@ Use this playbook whenever code changes require new or updated test suites, or w
   sh .verify/run.sh <feature>
   ```
 - Verify that tests pass cleanly and log artifacts survive in `.verify/artifacts/`.
+
+### Step 6: Handoff
+- Execute the chain — read `playbooks/code-review.md` and follow it for the adversarial pass over the new coverage. If review is out of scope this session, say so and name the artifact left for it.

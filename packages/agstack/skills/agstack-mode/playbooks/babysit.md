@@ -7,7 +7,7 @@
 
 ## 1. Session Anchor & TodoList Contract
 
-Before modifying branches, emit the Session Anchor and copy these 5 steps verbatim into your active plan:
+Before modifying branches, emit the Session Anchor and copy these 6 steps verbatim into your active plan:
 
 ```markdown
 > **Session Anchor:**
@@ -20,6 +20,7 @@ Before modifying branches, emit the Session Anchor and copy these 5 steps verbat
 - [ ] Step 3: Rebase onto target base branch and resolve conflicts with immutability discipline
 - [ ] Step 4: Triage review threads (address substantive defects, dismiss noise with citations)
 - [ ] Step 5: Run allowlisted verification suite (`.verify/run.sh`), push, and poll checks to green
+- [ ] Step 6: Execute the handoff — merged and deployed means done; on repeated failure or a merge-blocked state, read `playbooks/incident.md` (user-facing) or `playbooks/bug-fix.md` and follow it.
 
 ---
 

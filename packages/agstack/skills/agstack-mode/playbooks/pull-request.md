@@ -40,3 +40,6 @@ Use this playbook whenever you are preparing, chunking, and opening a ready pull
 ### Step 5: Final Sanity Check
 - Verify the PR branch is rebased cleanly onto the latest `master`.
 - Present the final PR title and body to the user or push to origin.
+
+### Step 6: Handoff
+- The PR is open, not done — read `playbooks/babysit.md` and follow it to drive the PR to green. If the session ends before merge, name the PR state left for babysitting.

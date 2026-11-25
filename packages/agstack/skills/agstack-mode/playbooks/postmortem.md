@@ -7,7 +7,7 @@
 
 ## 1. Session Anchor & TodoList Contract
 
-Copy these 5 steps verbatim into your active plan before writing:
+Copy these 6 steps verbatim into your active plan before writing:
 
 ```markdown
 > **Session Anchor:**
@@ -20,6 +20,7 @@ Copy these 5 steps verbatim into your active plan before writing:
 - [ ] Step 3: Run the causal chain (five-whys) from symptom to the systemic condition
 - [ ] Step 4: Derive action items that each remove a link in that chain
 - [ ] Step 5: Write the document and file it where the repo keeps runbooks/docs
+- [ ] Step 6: Route the action items — each item that is code work this session: read `playbooks/bug-fix.md` or `playbooks/feature.md` and follow it. Items deferred get a named owner and artifact.
 
 ---
 

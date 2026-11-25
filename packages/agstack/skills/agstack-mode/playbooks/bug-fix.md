@@ -7,7 +7,7 @@
 
 ## 1. Session Anchor & TodoList Contract
 
-Before modifying code, emit the Session Anchor and copy these 6 steps verbatim into your active plan:
+Before modifying code, emit the Session Anchor and copy these 7 steps verbatim into your active plan:
 
 ```markdown
 > **Session Anchor:**
@@ -21,6 +21,7 @@ Before modifying code, emit the Session Anchor and copy these 6 steps verbatim i
 - [ ] Step 4: Verify regression test now passes (exit 0)
 - [ ] Step 5: Execute default post-dev verification via `agstack` `verification` skill (`.verify/run.sh`)
 - [ ] Step 6: Code hygiene audit and deliver evidence record
+- [ ] Step 7: Execute the handoff — when the fix ships this session, read `playbooks/code-review.md` then `playbooks/pull-request.md` and follow them. If delivery is out of scope, say so and name the artifact left for those playbooks.
 
 ---
 
