@@ -44,7 +44,7 @@ Before anything else — before exploring, before the first Edit/Write or state-
 - Present the final PR title and body to the user or push to origin.
 
 ### Step 6: Handoff
-- The PR is open, not done — read `playbooks/babysit.md` and follow it to drive the PR to green. If the session ends before merge, name the PR state left for babysitting.
+- The PR is open, not done — read `playbooks/babysit.md` — hydrate its checklist into the task list, then follow it to drive the PR to green. If the session ends before merge, name the PR state left for babysitting.
 
 ### Step 7: Closing Audit
 - Before reporting, reopen the task list created at hydration and confirm every item is complete. An unchecked item is unfinished work, not a summary detail — the task is incomplete until every hydrated item is checked off or explicitly waived with a named reason.

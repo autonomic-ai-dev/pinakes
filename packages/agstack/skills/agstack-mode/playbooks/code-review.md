@@ -44,7 +44,7 @@ Before anything else — before exploring, before the first Edit/Write or state-
   - Complete evidence record with exit codes and measured coverage.
 
 ### Step 5: Handoff
-- On Must-Fix defects: read `playbooks/bug-fix.md` and follow it for each one. On a clean pass that ships: read `playbooks/pull-request.md`. If the next phase is out of scope, say so and name the artifact left for it.
+- On Must-Fix defects: read `playbooks/bug-fix.md` — hydrate its checklist into the task list, then follow it for each one. On a clean pass that ships: read `playbooks/pull-request.md`. If the next phase is out of scope, say so and name the artifact left for it.
 
 ### Step 6: Closing Audit
 - Before reporting, reopen the task list created at hydration and confirm every item is complete. An unchecked item is unfinished work, not a summary detail — the task is incomplete until every hydrated item is checked off or explicitly waived with a named reason.
