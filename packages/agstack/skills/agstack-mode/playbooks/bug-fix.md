@@ -64,6 +64,9 @@ Before anything else — before exploring, before the first Edit/Write or state-
 - Run `../scripts/check-added-comments.sh` and `../scripts/check-verify-separation.sh`.
 - Deliver the final evidence record.
 
+### Step 7: Closing Audit
+- Before reporting, reopen the task list created at hydration and confirm every item is complete. An unchecked item is unfinished work, not a summary detail — the task is incomplete until every hydrated item is checked off or explicitly waived with a named reason.
+
 ---
 
 ## 4. Evidence Record & Reply Standard

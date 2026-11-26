@@ -46,4 +46,7 @@ Before anything else — before exploring, before the first Edit/Write or state-
 - Verify that tests pass cleanly and log artifacts survive in `.verify/artifacts/`.
 
 ### Step 6: Handoff
-- Execute the chain — read `playbooks/code-review.md` and follow it for the adversarial pass over the new coverage. If review is out of scope this session, say so and name the artifact left for it.
+- Execute the chain — read `playbooks/code-review.md` — hydrate its checklist into the task list, then follow it for the adversarial pass over the new coverage. If review is out of scope this session, say so and name the artifact left for it.
+
+### Step 7: Closing Audit
+- Before reporting, reopen the task list created at hydration and confirm every item is complete. An unchecked item is unfinished work, not a summary detail — the task is incomplete until every hydrated item is checked off or explicitly waived with a named reason.
