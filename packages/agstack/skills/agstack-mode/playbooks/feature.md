@@ -96,3 +96,6 @@ Before anything else — before exploring, before the first Edit/Write or state-
 - Strip narration comments and temporary scaffolding (`no-comments`).
 - Ensure proof artifacts survive in `.verify/artifacts/`.
 - Present the evidence record: commands run, exit codes, and measured coverage.
+
+### Step 8: Closing Audit
+- Before reporting, reopen the task list created at hydration and confirm every item is complete. An unchecked item is unfinished work, not a summary detail — the task is incomplete until every hydrated item is checked off or explicitly waived with a named reason.

@@ -23,6 +23,7 @@ Before anything else — before exploring, before the first Edit/Write or state-
 - [ ] Step 4: Triage review threads (address substantive defects, dismiss noise with citations)
 - [ ] Step 5: Run allowlisted verification suite (`.verify/run.sh`), push, and poll checks to green
 - [ ] Step 6: Execute the handoff — merged and deployed means done; on repeated failure or a merge-blocked state, read `playbooks/incident.md` (user-facing) or `playbooks/bug-fix.md` and follow it.
+- [ ] Step 7: Closing audit — before reporting, reopen the hydrated task list and confirm every item is complete. An unchecked item is unfinished work, not a summary detail.
 
 ---
 

@@ -35,6 +35,7 @@ Before anything else — before exploring, before the first Edit/Write or state-
 - [ ] Step 4: Confirm mitigation with a live probe, not a log glance
 - [ ] Step 5: Isolate root cause on the preserved evidence, not on the mutated system
 - [ ] Step 6: Write the incident note, then execute the handoff — read `playbooks/bug-fix.md` and follow it for the root-cause repair with regression test, then read `playbooks/postmortem.md` for the blameless record. Writing "hand off to X" in the note is not the handoff.
+- [ ] Step 7: Closing audit — before reporting, reopen the hydrated task list and confirm every item is complete. An unchecked item is unfinished work, not a summary detail.
 
 ---
 
