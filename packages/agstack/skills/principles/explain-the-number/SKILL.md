@@ -14,6 +14,7 @@ A number is evidence only when you can say what produced it.
 2. **Ask why it is not twice as good.** Name the resource or code path that bounds the result: a lock, the disk, the network, the load generator, or a single core. Confirm it with a profile or a system counter from the run. A guess from reading code is not a limiter.
 3. **Rule out the other things it could measure.** Check for errors counted as success, skipped or cached work, code that never ran, a side left on default settings, and a change too small to matter end to end.
 4. **Keep the evidence with the number.** Record the run count, the spread, and the limiter next to the figure.
+5. **For an eval result, ask the same of the trials:** did every run actually do the task, does the gap hold across trials and models, and does the scenario matter. For a performance number, run the full procedure with the `benchmark-checklist` skill.
 
 ## Skip when
 
