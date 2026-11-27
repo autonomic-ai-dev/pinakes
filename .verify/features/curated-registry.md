@@ -22,7 +22,7 @@ Summary: pinakes is the central index of curated skill packages, DAG workflows, 
   - Behaviour: `packages/agstack/eval/tasks/` holds fixture+hidden-check tasks including backend-realistic ones (`incident-from-logs`, `migration-rollback`, `concurrency-race`, `flaky-test`, `perf-regression`). `eval/run.sh` runs `claude -p` under four conditions; `eval/gate.sh` promotes only measured improvements.
   - Outcome: Hidden checks verified by construction; gated runs recorded in `.verify/artifacts/eval/results.tsv`.
 - `incident-lifecycle`: Operate/Maintain playbooks for outage mitigation and blameless writeups.
-  - Behaviour: `playbooks/incident.md` (mitigate → freeze evidence → probe → hand off) and `playbooks/postmortem.md` (timeline → proven root cause → causal chain → action items), routed from `agstack-mode`.
+  - Behaviour: `playbooks/incident.md` (mitigate → freeze evidence → probe → hand off) and `playbooks/postmortem.md` (timeline → proven root cause → causal chain → action items), routed from `agstack-mode`. Handoffs write a resumable bundle (`.verify/artifacts/<phase>/bundle.md`) so chained phases can run as fresh subagents with full state. `agstack-mode` lite mode is a post-search re-route (blast radius ≤ 2 files) with a ~50-line diff cap that upgrades breaches back to the full path.
 - `watch-pr`: Typed GitHub PR/stack watcher tool inside `skills/watch-pr/` (bun + `gh`), wired into the `babysit` playbook.
 - `self-verification`: `.verify/verify.toml` allowlists `sh .verify/run.sh` so `tekmor verify` can issue receipts on pinakes itself.
 

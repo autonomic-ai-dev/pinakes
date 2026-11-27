@@ -5,6 +5,9 @@
 
 ---
 
+> **Question budget: 1** — at most one user-facing question, and only after stating what was tried, why the repo or an experiment cannot answer it, and the default you will take if unanswered. `never-block-on-human` applies inside the budget.
+
+
 ## 1. Session Anchor & TodoList Contract
 
 Copy these 6 steps verbatim into your active plan before writing:
@@ -23,7 +26,7 @@ Before anything else — before exploring, before the first Edit/Write or state-
 - [ ] Step 4: Derive action items that each remove a link in that chain
 - [ ] Step 5: Write the document and file it where the repo keeps runbooks/docs
 - [ ] Step 6: Route the action items — each item that is code work this session: read `playbooks/bug-fix.md` or `playbooks/feature.md` — hydrate its checklist into the task list, then follow it. Items deferred get a named owner and artifact.
-- [ ] Step 7: Closing audit — before reporting, reopen the hydrated task list and confirm every item is complete. An unchecked item is unfinished work, not a summary detail.
+- [ ] Step 7: Closing audit — before reporting, reopen the hydrated task list and confirm every item is complete. An unchecked item is unfinished work, not a summary detail. Write the resumable bundle at `.verify/artifacts/postmortem/bundle.md`: decisions made, files changed, evidence paths, and what the next phase needs to know.
 
 ---
 

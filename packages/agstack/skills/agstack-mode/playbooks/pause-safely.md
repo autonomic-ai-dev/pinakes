@@ -5,6 +5,9 @@
 
 ---
 
+> **Question budget: 1** — at most one user-facing question, and only after stating what was tried, why the repo or an experiment cannot answer it, and the default you will take if unanswered. `never-block-on-human` applies inside the budget.
+
+
 ## 1. Session Anchor & TodoList Contract
 
 Before suspending work, emit the Session Anchor and copy these 5 steps verbatim into your active plan:
