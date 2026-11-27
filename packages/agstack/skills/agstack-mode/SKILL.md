@@ -12,14 +12,15 @@ agstack is a fixed path, not a menu. Every invocation runs the **Core path** in 
 
 Do these steps in order. Do not skip one because the task looks small.
 
-1. **Select and hydrate.** Match the task's intent to a row of the Routing table below and read the chosen playbook file in full. Then, before anything else — before exploring, before the first `Edit`/`Write` or state-changing `Bash` — call the task tool (`TaskCreate`/`TodoWrite`, whichever this host exposes) and copy the playbook's numbered steps in as tasks. Loading this skill without reading a playbook, or reading it without hydrating the checklist, is a protocol breach. Narrating a plan in your reply does not count — the tool call is the compliance. The non-negotiables in `AGENTS.md` apply to every task.
-2. **Load the core references.** For any task that edits code, read these two files in full before the first `Edit`/`Write` call. Reading them after the first edit is a protocol breach, not compliance. Read-only answers skip them:
-   - `../token-efficiency/SKILL.md`: rethink whether code is needed, reuse existing code, minimise blast radius, and keep context reads bounded.
-   - `../no-comments/SKILL.md`: add no comments unless the user asks.
+1. **Select and hydrate.** Match the task's intent to a row of the Routing table below and read the chosen playbook file in full. Then, before anything else — before exploring, before the first `Edit`/`Write` or state-changing `Bash` — call the task tool (`TaskCreate`/`TodoWrite`, whichever this host exposes) and copy the playbook's numbered steps in as tasks — verbatim, then append any task-specific sub-steps the checklist does not cover. Doctrine steps are the skeleton; your additions ride on it. Loading this skill without reading a playbook, or reading it without hydrating the checklist, is a protocol breach. Narrating a plan in your reply does not count — the tool call is the compliance. The non-negotiables in `AGENTS.md` apply to every task.
+2. **Apply the core disciplines.** For any task that edits code, these rules bind before the first `Edit`/`Write` call. Read-only answers skip them:
+   - Token efficiency (`../token-efficiency/SKILL.md`): rethink whether code is needed; reuse what the repo and installed dependencies already have; keep the blast radius and context reads small; never trade away boundary validation, error handling that prevents data loss, security checks, or tests for new logic.
+   - No comments (`../no-comments/SKILL.md`): no new comments, docstrings, or TODOs unless the user asks; preserve existing comments; write self-documenting names and types.
+   - Read the full file only when its boundary is unclear (a large refactor for token-efficiency, docstrings/API docs for no-comments).
 3. **Search before reading.** Use grep or ripgrep to find the relevant lines, then read only that bounded range. Do not read whole large files.
 4. **Pick the playbook.** Step 1 already did this — select, read, hydrate. If the task's intent shifted during exploration, re-select: read the better-matching playbook and re-hydrate its checklist. No match: use `investigation`, and say why.
 5. **Load the principles the task triggers.** Each principle's `SKILL.md` lists when it applies. Read only those you need. Cite only principles you read this session.
-6. **Execute the playbook.** For any code edit, the smallest complete change comes first. Before writing new code, check in this order: does it need to exist, does the repo already have it, does the standard library or an installed dependency cover it, and is a one-line answer enough. When the playbook's deliverable hands off to another playbook (its lifecycle block names one, or `references/sdlc-lifecycle.md` maps the edge), read that playbook file before producing the deliverable, and hydrate its checklist into the task list too — each chained playbook's steps become new tasks. The chain continues until the lifecycle is done.
+6. **Execute the playbook.** For any code edit, the smallest complete change comes first. Before writing new code, check in this order: does it need to exist, does the repo already have it, does the standard library or an installed dependency cover it, and is a one-line answer enough. When the playbook's deliverable hands off to another playbook (its lifecycle block names one, or `references/sdlc-lifecycle.md` maps the edge), read that playbook file before producing the deliverable, and hydrate its checklist into the task list too — each chained playbook's steps become new tasks. The chain continues until the lifecycle is done. When the host supports subagent delegation, run each chained phase after the first as a fresh subagent whose brief is the playbook path plus the previous phase's bundle (`.verify/artifacts/<phase>/bundle.md`) — fresh context, full state, no attention decay.
 7. **Verify.** Any code change is incomplete until `skills/verification` passes through the `.verify/` allowlist, with artifacts under `.verify/artifacts/`. When `agstack-ui` is installed, any UI change also needs its pixel-fidelity, responsive, and layered UI-test checks. When `tekmor` is installed, receipt the gate: `tekmor verify -- sh .verify/run.sh` and cite the receipt id in the evidence record. Never ask "should I run tests?".
 8. **Report.** Use the reply format below.
 
@@ -33,7 +34,11 @@ Before any verification suite or test harness, output the session anchor:
 
 ## Lite mode
 
-When the user asks for lite mode, or a task is a one-file change, run only steps 1, 3, and 6 of the core path. Load only the principles the task triggers, and enforce the comment and verification gates. Playbooks and the eval are not used in lite mode.
+Lite is a re-route decided after the search step, not a guess made before it. The user asking for lite mode always takes it. Otherwise: once the bounded search (step 3) shows the blast radius is two files or fewer and the task needs no chain, playbook deliverable, or new public surface, drop to lite and say so.
+
+In lite mode run only steps 1, 3, and 6 of the core path. Load only the principles the task triggers, and enforce the comment and verification gates. Playbooks and the eval are not used in lite mode.
+
+A lite session that produces a diff over ~50 changed lines or touches more than two files mis-classified. Upgrade to the full path: read the matched playbook, hydrate its checklist into the task list, then continue. Staying lite on a large diff is a protocol breach.
 
 ## Non-negotiables
 

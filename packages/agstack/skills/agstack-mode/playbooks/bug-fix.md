@@ -23,7 +23,7 @@ Before anything else — before exploring, before the first Edit/Write or state-
 - [ ] Step 4: Verify regression test now passes (exit 0)
 - [ ] Step 5: Execute default post-dev verification via `agstack` `verification` skill (`.verify/run.sh`)
 - [ ] Step 6: Code hygiene audit and deliver evidence record
-- [ ] Step 7: Execute the handoff — when the fix ships this session, read `playbooks/code-review.md` then `playbooks/pull-request.md` and follow them. If delivery is out of scope, say so and name the artifact left for those playbooks.
+- [ ] Step 7: Execute the handoff — when the fix ships this session, read `playbooks/code-review.md` then `playbooks/pull-request.md` and follow them. If delivery is out of scope, say so and name the artifact left for those playbooks. Before handing off, write the resumable bundle at `.verify/artifacts/bug-fix/bundle.md`: decisions made, files changed, evidence paths, and what the next phase needs to know.
 
 ---
 
