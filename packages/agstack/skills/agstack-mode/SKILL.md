@@ -97,7 +97,7 @@ Match the user's intent to one playbook. Read it in full before touching code. R
 | Build | **Docs** | API docs, architecture specs, runbooks | [`playbooks/technical-writing.md`](playbooks/technical-writing.md) |
 | Verify | **Review** | Adversarial review: concurrency, leaks, error propagation | [`playbooks/code-review.md`](playbooks/code-review.md) |
 | Verify | **Security** | Threat model, injection, secrets, AST validation, jailbreaks | [`playbooks/security-and-jailbreak-defense.md`](playbooks/security-and-jailbreak-defense.md) |
-| Verify | **Evaluation** | Agent skills, prompts, or routing against golden data | [`playbooks/eval.md`](playbooks/eval.md) |
+| Verify | **Evaluation** | Agent skills, playbooks, prompts, or routing against the bench corpus — reps, graders, gate | [`playbooks/eval.md`](playbooks/eval.md) |
 | Deploy | **Delivery** | Atomic commits, PR descriptions with evidence | [`playbooks/pull-request.md`](playbooks/pull-request.md) |
 | Deploy | **Delivery** | Driving open PRs to green | [`playbooks/babysit.md`](playbooks/babysit.md) |
 | Deploy | **Delivery** | Landing a verified stack, branch disposal | [`playbooks/shipping.md`](playbooks/shipping.md) |
@@ -112,6 +112,7 @@ Match the user's intent to one playbook. Read it in full before touching code. R
 | Maintain | **Suspension** | Checkpointing in-flight work before a pause | [`playbooks/pause-safely.md`](playbooks/pause-safely.md) |
 | Maintain | **Maintenance** | Pruning worktrees, containers, sockets, disk bloat | [`playbooks/worktree-cleanup.md`](playbooks/worktree-cleanup.md) |
 | Maintain | **Postmortem** | Post-incident writeup: evidence-backed timeline, proven root cause, action items | [`playbooks/postmortem.md`](playbooks/postmortem.md) |
+| Maintain | **Playbook & skill maintenance** | Creating or repairing SDLC playbooks and skills; doctrine fixes driven by bench evidence | [`playbooks/playbook-authoring.md`](playbooks/playbook-authoring.md) |
 | — | **Autonomous run** | Hands-off end-to-end task execution across multiple files | [`playbooks/autonomous-run.md`](playbooks/autonomous-run.md) |
 | — | **Meta** | Authoring or changing a `SKILL.md` | [`playbooks/authoring-a-skill.md`](playbooks/authoring-a-skill.md) |
 | — | **Entrepreneurship** | Validate ideas, build lean MVP, acquire first customers, price, grow | `agstack-founder` package playbooks (`entrepreneur`) |
