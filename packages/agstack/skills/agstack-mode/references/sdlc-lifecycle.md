@@ -14,6 +14,7 @@ Request → Design → Build → Verify → Deploy → Operate → Maintain
 | `investigation` | a symptom or question without a fix request | proven cause or answer | `bug-fix`, or `incident` if the cause is live |
 | `multi-phase-plan` | a request too big for one pass | ordered phase list | `feature`/`refactoring` per phase |
 | `autonomous-run` | a milestone-level goal | a self-driving run loop | whichever playbook each phase routes to |
+| `coordinator` | a batch of payloads/issues | deduplicated `plan.json` + context packets | workers via `orchestrate` executors |
 
 ## Design — decide before building
 
@@ -71,6 +72,7 @@ Request → Design → Build → Verify → Deploy → Operate → Maintain
 | `pause-safely` | work mid-flight | resumable state | `session-pickup` |
 | `session-pickup` | a paused or handed-off task | resumed context | whichever playbook the task routes to |
 | `worktree-cleanup` | finished work | clean tree, no orphans | done |
+| `gardening` | a foot-gun catalog entry (`.verify/footguns.md`) | small capped fix PRs + a run record | `pull-request` per finding |
 
 ## The handoff rule
 

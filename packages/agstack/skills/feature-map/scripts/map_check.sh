@@ -10,18 +10,25 @@ MAP="$1"
 ERRORS=0
 H2_FILE="$(mktemp)"
 CMD_FILE="$(mktemp)"
-trap 'rm -f "$H2_FILE" "$CMD_FILE"' EXIT
+BODY_FILE="$(mktemp)"
+trap 'rm -f "$H2_FILE" "$CMD_FILE" "$BODY_FILE"' EXIT
 
 fail() {
   echo "FAIL $MAP: $1" >&2
   ERRORS=$((ERRORS + 1))
 }
 
-if ! head -n 1 "$MAP" | grep -q '^# '; then
+if head -n 1 "$MAP" | grep -q '^---$'; then
+  awk 'NR==1 && /^---$/ {infm=1; next} infm && /^---$/ {infm=0; next} infm {next} !found && NF==0 {next} {found=1; print}' "$MAP" > "$BODY_FILE"
+else
+  cp "$MAP" "$BODY_FILE"
+fi
+
+if ! head -n 1 "$BODY_FILE" | grep -q '^# '; then
   fail "first line must be an H1 title"
 fi
 
-grep '^## ' "$MAP" | grep -v '^## Code$' > "$H2_FILE" || true
+grep '^## ' "$BODY_FILE" | grep -v '^## Code$' > "$H2_FILE" || true
 set -- "## Sub-features" "## How to get to it (user POV)" "## Verification Suites (Targeted Test Commands)" "## Gotchas"
 position=1
 while IFS= read -r heading; do
