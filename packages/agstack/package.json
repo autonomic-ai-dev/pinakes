@@ -1,6 +1,6 @@
 {
   "name": "agstack",
-  "version": "1.0.0",
+  "version": "1.1.0",
   "description": "agstack (Abhiuday Gupta Stack) — Universal engineering process, playbooks, strict verification (.verify/), immutability, and zero comment slop",
   "kind": "bundle",
   "entrypoints": {

@@ -32,6 +32,24 @@ pinakes/
     └── run.sh                       # Manifest, workflow, and skill-lint gate
 ```
 
+## Installation
+
+Each package is versioned (`packages/<name>/package.json`) and self-contained — pick one of four install paths:
+
+| Method | Command | Use when |
+|---|---|---|
+| `npx skills` (GitHub) | `npx skills add autonomic-ai-dev/pinakes/packages/agstack` | Production install, no clone needed |
+| `npx skills` (local) | `git clone …/pinakes && npx skills add ./pinakes/packages/agstack` | Versioned copy install from a clone |
+| Dev symlink | `sh scripts/install.sh --link [pkgs…]` | Hacking on doctrine — repo edits go live instantly |
+| `npx skills` (script) | `sh scripts/install.sh [pkgs…]` | Copy install from a clone, same as local method |
+
+Notes:
+
+- Package names: `agstack` (default), `agstack-ui`, `agstack-founder`.
+- `--link` installs per-skill symlinks into `~/.agents/skills/` and `~/.config/devin/skills/`; existing dirs are preserved as `<name>.bak`.
+- `npx skills` installs a **copy** — pull the repo and re-run `install.sh` to pick up doctrine changes. `--link` removes that step.
+- Restore a pinned set anywhere with `skills experimental_install` (`skills-lock.json`).
+
 ## Packages
 
 `registry.json` maps each alias to a local `path` or an external `git_url`. Local packages:
