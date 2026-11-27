@@ -4,6 +4,9 @@ Use this playbook at the beginning of any complex task to understand the existin
 
 ---
 
+> **Question budget: 2** — at most two user-facing questions; each must first state what was tried, why the repo or an experiment cannot answer it, and the default you will take if unanswered. `never-block-on-human` applies inside the budget.
+
+
 Before anything else — before exploring, before the first Edit/Write or state-changing Bash — complete this ritual: read `../token-efficiency/SKILL.md` and `../no-comments/SKILL.md`, call the task tool (`TaskCreate`/`TodoWrite`), and copy the steps below in as tasks. Narrating a plan or reading the refs after the first edit is a protocol breach, not compliance.
 
 ## Process Steps

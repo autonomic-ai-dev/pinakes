@@ -7,6 +7,9 @@
 
 ---
 
+> **Question budget: 1** — at most one user-facing question, and only after stating what was tried, why the repo or an experiment cannot answer it, and the default you will take if unanswered. `never-block-on-human` applies inside the budget.
+
+
 ## 1. The Model
 
 An incident is two different jobs that humans learn to separate the hard way: **stop the bleeding** and **find out why it happened**. Doing them in the wrong order is the classic failure — the agent that starts reading code while users are still down, or that restarts the wedged service "to see if it helps" and destroys the only copy of the evidence.
