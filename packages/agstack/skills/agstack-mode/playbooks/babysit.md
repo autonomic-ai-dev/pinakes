@@ -12,7 +12,7 @@
 
 Before modifying branches, emit the Session Anchor and copy these 6 steps verbatim into your active plan:
 
-Before anything else — before exploring, before the first Edit/Write or state-changing Bash — complete this ritual: read `../token-efficiency/SKILL.md` and `../no-comments/SKILL.md`, call the task tool (`TaskCreate`/`TodoWrite`), and copy the steps below in as tasks. Narrating a plan or reading the refs after the first edit is a protocol breach, not compliance.
+Before anything else — before exploring, before the first Edit/Write or state-changing Bash — complete this ritual: apply the core disciplines (`../token-efficiency/SKILL.md`, `../no-comments/SKILL.md` — read the full file only when its boundary is unclear), call the task tool (`TaskCreate`/`TodoWrite`), and copy the steps below in as tasks. Narrating a plan or reading the refs after the first edit is a protocol breach, not compliance.
 
 ```markdown
 > **Session Anchor:**
@@ -20,7 +20,7 @@ Before anything else — before exploring, before the first Edit/Write or state-
 > - **SDLC Orchestrator**: `agstack` (`playbooks/babysit.md` / `skills/verification/SKILL.md`)
 ```
 
-- [ ] Step 1: Inspect PR state (CI checks, mergeability, bot review comments)
+- [ ] Step 1: Inspect PR state (CI checks, mergeability, bot review comments) — and read the owning feature's `risk:` frontmatter: `high` requires recorded human approval before merge; `low`/`medium` merge on green gates
 - [ ] Step 2: Reproduce any failing CI check locally using `.verify/run.sh`
 - [ ] Step 3: Rebase onto target base branch and resolve conflicts with immutability discipline
 - [ ] Step 4: Triage review threads (address substantive defects, dismiss noise with citations)

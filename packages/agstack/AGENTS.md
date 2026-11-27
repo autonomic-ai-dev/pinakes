@@ -119,7 +119,7 @@ In repositories with `.verify/` (or when creating verification):
 4. **The TodoList Contract (Skill & Playbook Hydration):**
    - When a playbook is chosen, read it and copy its numbered checklist steps verbatim into your active task plan before calling any code-editing or execution tools.
    - Operating without opening and copying the matched playbook into your plan is a protocol breach.
-5. **Feature Contract:** Every `.verify/features/<feature>.md` has four contract H2 sections in order, plus a `## Code` section when the repository's harness requires one. Optional frontmatter holds `feature` (equal to the file name), `knowledge_base`, and `related` wikilinks:
+5. **Feature Contract:** Every `.verify/features/<feature>.md` has four contract H2 sections in order, plus a `## Code` section when the repository's harness requires one. Optional frontmatter holds `feature` (equal to the file name), `knowledge_base`, `related` wikilinks, and `risk` (`low`/`medium`/`high`; absent = `medium`). `risk` is declared once and human-reviewed — the agent reads it, never self-assigns it. `high` requires recorded human approval before merge; `medium` merges on green checks plus review; `low` may auto-merge when verification is green. A feature with `[UNCONFIRMED]` expectations or no functional suite can never claim `low`:
    - `## Sub-features`: Atomic kebab-case identifiers with intent, behavior, and outcome.
    - `## How to get to it (user POV)`: Literal CLI, HTTP, or message entrypoints.
    - `## Verification Suites (Targeted Test Commands)`: Unit command, functional command, allowlisted command, and numbered four-part steps.
