@@ -33,6 +33,7 @@ Request → Design → Build → Verify → Deploy → Operate → Maintain
 | `test-suite-generation` | changed code | unit + functional coverage | `code-review` |
 | `technical-writing` | knowledge to transfer | docs, runbooks, ADRs | `pull-request` |
 | `authoring-a-skill` | a repeated procedure | a candidate skill | `eval` for promotion |
+| `playbook-authoring` | a bench failure or scope gap | a candidate playbook or doctrine fix | `eval` for promotion |
 
 ## Verify — prove it before it ships
 
