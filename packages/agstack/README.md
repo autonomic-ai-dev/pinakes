@@ -61,7 +61,7 @@ agstack/
 │   │   └── scripts/                     # feature_coverage.sh, coverage_gate.sh, gate_report.sh
 │   ├── verification/                    # Verification harness runner & allowlist
 │   │   ├── SKILL.md
-│   │   └── references/                  # allowlist-and-runner, hurl-standards
+│   │   └── references/                  # allowlist-and-runner, functional-tests
 │   ├── security-audit/                  # Vulnerability scanning, secrets, OWASP, AST validation
 │   ├── jailbreak-defense/               # Prompt injection defense, delimiters, tool bounds
 │   ├── statechart/                      # TLA+ compiler + corpus rendered as Mermaid statecharts
@@ -126,5 +126,5 @@ When working in a repository with `.verify/`:
    ```bash
    sh .verify/run.sh <feature>
    ```
-3. **Verify Coverage:** `checks/feature_coverage.sh` guarantees 1:1 parity between feature contract steps and `.hurl` requests.
+3. **Verify Coverage:** `checks/feature_coverage.sh` guarantees 1:1 parity between feature contract steps and functional suite entries.
 4. **Preserve Proof:** Proof artifacts in `.verify/artifacts/` survive teardown.
