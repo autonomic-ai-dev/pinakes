@@ -1,6 +1,6 @@
 ---
 name: agstack-mode
-description: "agstack's engineering mode for backend and DevOps work: a fixed core path, one playbook chosen from the SDLC routing table, principles, subagent delegation, and verification evidence before completion. Use when the user says agstack or asks for such work."
+description: "agstack's engineering mode for backend and DevOps work: a fixed core path, one playbook chosen from the SDLC routing table, principles, subagent delegation, and verification evidence before completion. Use when implementing, fixing, refactoring, testing, or reviewing code — and whenever the user says agstack."
 version: 0.1.0
 ---
 
